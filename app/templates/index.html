@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>NextGame : Now!</title>
+        <link rel="stylesheet" href="https://adz946.github.io/css/flex.css" />
+        <link rel="stylesheet" href="{{url_for('static', filename='css/app.css')}}" /> 
+    </head>
+
+    <body class="column-top">
+        <header class="column center">
+            <h2>Find YOUR NextGame</h2>
+        </header>
+
+        <main class="row">
+            <div id="user" class="column-top">
+                {% if user %}
+                <h3>Hello User!</h3>
+                {% else %}
+                <h3>Sign In / Up Now! <br> Save Your Searches</h3>
+                <button>Sign In</button>
+                <button>Sign Up</button>
+                {% endif %}
+            </div>
+
+            <div id="search" class="column-top">
+                <p> Enter the Genre, Tag, and Platform that applies to your search! <br>
+                    You can also enter up to 3 similar games to enhance your search </p>
+    
+                <form id="queryForm" method="post" class="column-top">
+                    <div class="row center">
+                        <div class="column">
+                            <label for="genre">Genre</label>
+                            <select name="genre" id="genre">
+                                {% for genre_name, genre_id in genres.items() %}
+                                <option value="{{ genre_id }}">{{ genre_name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+        
+                        <div class="column">
+                            <label for="tag">Tag</label>
+                            <select name="tag" id="tag">
+                                {% for tag_name, tag_id in tags.items() %}
+                                <option value="{{ tag_id }}">{{ tag_name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+        
+                        <div class="column">
+                            <label for="platform">Platform</label>
+                            <select name="platform" id="platform">
+                                {% for platform_name, platform_id in platforms.items() %}
+                                <option value="{{ platform_id }}">{{ platform_name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+    
+                    <div class="row center">
+                        <div class="column">
+                            <label for="game-1">Similar Game: 1*</label>
+                            <input type="text" id="game-1" name="game-1" placeholder="Call of Duty: Modern Warefare 2" />
+                        </div>
+    
+                        <div class="column">
+                            <label for="game-2">Similar Game: 2*</label>
+                            <input type="text" id="game-2" name="game-2" placeholder="Fall Guys" />
+                        </div>
+    
+                        <div class="column">
+                            <label for="game-3">Similar Game: 3*</label>
+                            <input type="text" id="game-3" name="game-3" placeholder="Pokemon: Sword" />
+                        </div>
+                    </div>
+                    <p class="note">* is optional</p>
+    
+                    <button type="submit">Find Your Games!</button>
+                </form>
+            </div>
+        </main>
+    </body>
+</html>
