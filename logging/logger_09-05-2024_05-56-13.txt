@@ -1,0 +1,3 @@
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 208-590-476
+INFO:werkzeug: * Detected change in 'c:\\Users\\adsal\\OneDrive\\Documents\\Bachelor of IT\\2024 - SP1\\Cloud Computing\\A3\\NextGame\\app\\library\\index.py', reloading

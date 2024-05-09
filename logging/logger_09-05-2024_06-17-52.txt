@@ -1,0 +1,4 @@
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 208-590-476
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 16:18:00] "[35m[1mGET /fetch_game_details?id=28613 HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\adsal\\OneDrive\\Documents\\Bachelor of IT\\2024 - SP1\\Cloud Computing\\A3\\NextGame\\app\\library\\index.py', reloading

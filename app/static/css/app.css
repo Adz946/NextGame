@@ -27,14 +27,32 @@ header * { padding: 1%; }
 }
 #user, #search { height: 100%; }
 
+#sections { 
+    width: 80%; 
+    height: 80%;
+}
+
 form div {
-    width: 85%;
+    height: 5%;
     padding: 2%;
+    width: 100%;
     color: snow;
+    margin-bottom: 2%;
+    border-radius: 5px;
+    border: 2px groove brown;
     background-color: brown;
 }
-form { width: 75%; }
-label { font-weight: bold; }
+form { 
+    margin: 2%;
+    width: 45%;
+    height: 100%;
+}
+label { 
+    width: 35%;
+    font-weight: bold; 
+}
+input, select { width: 60%; }
+label, input, select { height: 80%; }
 
 .note {
     font-size: small;
@@ -53,5 +71,6 @@ button {
 }
 button:hover { 
     color: black;
+    border: 2px groove brown;
     background-color: orange; 
 }

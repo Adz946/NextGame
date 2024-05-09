@@ -1,0 +1,8 @@
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 208-590-476
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games/28613?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games/378625?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 16:40:48] "GET /fetch_game_details?id=28613&id=378625 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\adsal\\OneDrive\\Documents\\Bachelor of IT\\2024 - SP1\\Cloud Computing\\A3\\NextGame\\app\\library\\index.py', reloading

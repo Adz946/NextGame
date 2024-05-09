@@ -1,5 +1,5 @@
-from app.requests.request import search_dataset, search_by_id;
-from flask import Blueprint, render_template, session;
+from app.requests.request import home_setup, autocomplete_search, search_by_id;
+from flask import Blueprint, render_template, session, request, jsonify;
 # ---------------------------------------------------------------------------------------------------- #
 _index = Blueprint("_index", __name__, url_prefix="/")
 
@@ -10,24 +10,32 @@ def index():
         "index.html", 
         genres = session['genres'], 
         tags = session['tags'], 
-        platforms = session['platforms'],
-        game = session["game"]
+        platforms = session['platforms']
     )
+# ---------------------------------------------------------------------------------------------------- #   
+@_index.route("/game_search", methods=["POST"])
+def game_search():
+    genre = request.form['genre']
+    tag = request.form['tag']
+    platform = request.form['platform']
+    print(f"Genre: {genre} | Tag: {tag} | Platform: {platform}")
+    
+    return index()
+
+@_index.route("/game_autocomplete")
+def game_autocomplete():
+    return autocomplete_search(request.args.get('term', '')) # jQuery UI sends 'term' by default
+
+@_index.route('/fetch_game_details', methods=["GET"])
+def fetch_game_details():
+    ids = request.args.getlist("id")
+    if ids: return search_by_id(ids)
+    else: return jsonify({"error": "Game IDs required!"}), 400
 # ---------------------------------------------------------------------------------------------------- #
 def setup():
-    if 'genres' not in session:
-        genres = search_dataset(url_end = "genres")
-        if genres is not None:  session['genres'] = genres
+    genres, tags, platforms = home_setup()
     
-    if 'tags' not in session:
-        tags = search_dataset(url_end = "tags")
-        if tags is not None: session['tags'] = tags
-    
-    if 'platforms' not in session:
-        platforms = search_dataset(url_end = "platforms")
-        if platforms is not None: session['platforms'] = platforms
-        
-    if 'game' not in session:
-        game = search_by_id(13536)
-        if game is not None: session["game"] = game
+    if genres is not None: session['genres'] = genres
+    if tags is not None: session['tags'] = tags 
+    if platforms is not None: session['platforms'] = platforms
 # ---------------------------------------------------------------------------------------------------- #

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>NextGame : Your Results</title>
+        <link rel="stylesheet" href="https://adz946.github.io/css/flex.css" />
+        <link rel="stylesheet" href="{{url_for('static', filename='css/app.css')}}" /> 
+    </head>
+
+    <body class="column center">
+        <header class="column center">
+            <h2>Here Are YOUR NextGames</h2>
+        </header>
+
+        <main class="row">
+            <div id="user" class="column-top">
+                {% if user %}
+                <h3>Hello User!</h3>
+                {% else %}
+                <h3>Sign In / Up Now! <br> Save Your Searches</h3>
+                <button>Sign In</button>
+                <button>Sign Up</button>
+                {% endif %}
+            </div>
+
+            <div id="search" class="column-top">
+                <h3>Here are your results</h3>
+            </div>
+        </main>
+    </body>
+</html>

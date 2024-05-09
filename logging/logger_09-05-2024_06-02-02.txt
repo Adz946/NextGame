@@ -1,0 +1,57 @@
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 208-590-476
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/genres?key=b876dc8875674725a3d822a2d8dcINFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+b3.connectionpool:https://api.rawg.io:443 "GET /api/tags?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/platforms?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
+INFO:root:Success! Genres have been found
+INFO:root:Success! Tags have been found
+INFO:root:Success! Platforms have been found
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 16:02:09] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 16:02:09] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games?key=b876dc8875674725a3d822a2d8dc79d2&search=Halo HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games?key=b876dc8875674725a3d822a2d8dc79d2&search=Halo%20R HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 16:02:16] "GET /game_autocomplete?term=Halo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 16:02:16] "GET /game_autocomplete?term=Halo%20R HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games/28613?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
+INFO:root:Success! Game [28613] Will Be Extracted
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 16:02:19] "GET /fetch_game_details?id=28613 HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games/28613?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
+INFO:root:Success! Game [28613] Will Be Extracted
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 16:02:21] "GET /fetch_game_details?id=28613 HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/genres?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/tags?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/platforms?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
+INFO:root:Success! Genres have been found
+INFO:root:Success! Tags have been found
+INFO:root:Success! Platforms have been found
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 16:03:09] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 16:03:09] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games?key=b876dc8875674725a3d822a2d8dc79d2&search=Halo%20 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 16:03:14] "GET /game_autocomplete?term=Halo%20 HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games?key=b876dc8875674725a3d822a2d8dc79d2&search=Halo%20R HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 16:03:20] "GET /game_autocomplete?term=Halo%20R HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games/28613?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
+INFO:root:Success! Game [28613] Will Be Extracted
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 16:03:23] "GET /fetch_game_details?id=28613 HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games?key=b876dc8875674725a3d822a2d8dc79d2&search=Stardew HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 16:03:38] "GET /game_autocomplete?term=Stardew HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games/654?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
+INFO:root:Success! Game [654] Will Be Extracted
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 16:03:41] "GET /fetch_game_details?id=654 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\adsal\\OneDrive\\Documents\\Bachelor of IT\\2024 - SP1\\Cloud Computing\\A3\\NextGame\\app\\library\\index.py', reloading

@@ -1,0 +1,30 @@
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 208-590-476
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectINFO:werkzeug: * Restarting with stat
+pi/genres?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/genres?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/tags?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/tags?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/platforms?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
+INFO:root:Success! Genres have been found
+INFO:root:Success! Tags have been found
+INFO:root:Success! Platforms have been found
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 13:44:22] "GET / HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/platforms?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
+INFO:root:Success! Genres have been found
+INFO:root:Success! Tags have been found
+INFO:root:Success! Platforms have been found
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 13:44:23] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 13:44:23] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 13:44:25] "[35m[1mPOST /game_search HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 13:44:25] "GET /game_search?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 13:44:25] "GET /game_search?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 13:44:26] "GET /game_search?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 13:44:26] "[36mGET /game_search?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\adsal\\OneDrive\\Documents\\Bachelor of IT\\2024 - SP1\\Cloud Computing\\A3\\NextGame\\app\\library\\index.py', reloading

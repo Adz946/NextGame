@@ -1,0 +1,16 @@
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 208-590-476
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/genres?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/tags?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/platforms?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
+INFO:root:Success! Genres have been found
+INFO:root:Success! Tags have been found
+INFO:root:Success! Platforms have been found
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 15:22:09] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 15:22:10] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games?key=YOUR_API_KEY&search=Halo HTTP/1.1" 401 None
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 15:22:14] "[35m[1mGET /game_autocomplete?term=Halo HTTP/1.1[0m" 500 -

@@ -1,0 +1,91 @@
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 208-590-476
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games?key=YOUR_API_KEY&search= HTTP/1.1" 401 None
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 15:17:46] "[35m[1mGET /game_autocomplete?game_1=Call+of+Duty:+Modern+Warfare+2&game_2=&game_3= HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 15:17:46] "[36mGET /game_autocomplete?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 15:17:46] "[36mGET /game_autocomplete?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 15:17:46] "[36mGET /game_autocomplete?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 15:17:47] "[36mGET /game_autocomplete?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/genres?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/tags?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/platforms?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
+INFO:root:Success! Genres have been found
+INFO:root:Success! Tags have been found
+INFO:root:Success! Platforms have been found
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 15:18:46] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 15:18:46] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games?key=YOUR_API_KEY&search=call%20of HTTP/1.1" 401 None
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 15:18:52] "[35m[1mGET /game_autocomplete?term=call%20of HTTP/1.1[0m" 500 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games?key=YOUR_API_KEY&search=call%20of%20fu HTTP/1.1" 401 None
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 15:18:53] "[35m[1mGET /game_autocomplete?term=call%20of%20fu HTTP/1.1[0m" 500 -
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games?key=YOUR_API_KEY&search=call%20of%20fut HTTP/1.1" 401 None
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 15:18:53] "[35m[1mGET /game_autocomplete?term=call%20of%20fut HTTP/1.1[0m" 500 -
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games?key=YOUR_API_KEY&search=call%20of%20f HTTP/1.1" 401 None
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 15:18:53] "[35m[1mGET /game_autocomplete?term=call%20of%20f HTTP/1.1[0m" 500 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games?key=YOUR_API_KEY&search=call%20of%20 HTTP/1.1" 401 None
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 15:18:55] "[35m[1mGET /game_autocomplete?term=call%20of%20 HTTP/1.1[0m" 500 -
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games?key=YOUR_API_KEY&search=call%20of%20duty HTTP/1.1" 401 None
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 15:18:55] "[35m[1mGET /game_autocomplete?term=call%20of%20duty HTTP/1.1[0m" 500 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games?key=YOUR_API_KEY&search= HTTP/1.1" 401 None
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 15:19:04] "[35m[1mGET /game_autocomplete?game_1=call+of+duty&game_2=&game_3= HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 15:19:04] "[36mGET /game_autocomplete?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 15:19:04] "[36mGET /game_autocomplete?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 15:19:04] "[36mGET /game_autocomplete?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games?key=YOUR_API_KEY&search= HTTP/1.1" 401 None
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 15:19:42] "[35m[1mGET /game_autocomplete?game_1=call+of+duty&game_2=&game_3= HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 15:19:42] "[36mGET /game_autocomplete?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 15:19:42] "[36mGET /game_autocomplete?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 15:19:43] "[36mGET /game_autocomplete?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games?key=YOUR_API_KEY&search=Call%20 HTTP/1.1" 401 None
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 15:19:51] "[35m[1mGET /game_autocomplete?term=Call%20 HTTP/1.1[0m" 500 -
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games?key=YOUR_API_KEY&search=Call HTTP/1.1" 401 None
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 15:19:51] "[35m[1mGET /game_autocomplete?term=Call HTTP/1.1[0m" 500 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games?key=YOUR_API_KEY&search=Halo HTTP/1.1" 401 None
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 15:19:53] "[35m[1mGET /game_autocomplete?term=Halo HTTP/1.1[0m" 500 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games?key=YOUR_API_KEY&search=Halo HTTP/1.1" 401 None
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 15:21:42] "[35m[1mGET /game_autocomplete?term=Halo HTTP/1.1[0m" 500 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games?key=YOUR_API_KEY&search=Hslo HTTP/1.1" 401 None
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 15:21:44] "[35m[1mGET /game_autocomplete?term=Hslo HTTP/1.1[0m" 500 -
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games?key=YOUR_API_KEY&search=Hslo HTTP/1.1" 401 None
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 15:21:45] "[35m[1mGET /game_autocomplete?term=Hslo HTTP/1.1[0m" 500 -
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games?key=YOUR_API_KEY&search=Hslo HTTP/1.1" 401 None
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 15:21:45] "[35m[1mGET /game_autocomplete?term=Hslo HTTP/1.1[0m" 500 -
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games?key=YOUR_API_KEY&search=Hslo HTTP/1.1" 401 None
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 15:21:45] "[35m[1mGET /game_autocomplete?term=Hslo HTTP/1.1[0m" 500 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games?key=YOUR_API_KEY&search=Halo HTTP/1.1" 401 None
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 15:21:48] "[35m[1mGET /game_autocomplete?term=Halo HTTP/1.1[0m" 500 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/genres?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/tags?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/platforms?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
+INFO:root:Success! Genres have been found
+INFO:root:Success! Tags have been found
+INFO:root:Success! Platforms have been found
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 15:21:54] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 15:21:54] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games?key=YOUR_API_KEY&search=Halo HTTP/1.1" 401 None
+INFO:werkzeug:127.0.0.1 - - [09/May/2024 15:21:58] "[35m[1mGET /game_autocomplete?term=Halo HTTP/1.1[0m" 500 -
