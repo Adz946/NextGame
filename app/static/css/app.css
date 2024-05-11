@@ -32,7 +32,7 @@ header * { padding: 1%; }
     height: 80%;
 }
 
-form div {
+[id*='section_'] div {
     height: 5%;
     padding: 2%;
     width: 100%;
@@ -42,7 +42,7 @@ form div {
     border: 2px groove brown;
     background-color: brown;
 }
-form { 
+[id*='section_'] { 
     margin: 2%;
     width: 45%;
     height: 100%;
@@ -52,7 +52,7 @@ label {
     font-weight: bold; 
 }
 input, select { width: 60%; }
-label, input, select { height: 80%; }
+label, input, select { height: 100%; }
 
 .note {
     font-size: small;
@@ -74,3 +74,5 @@ button:hover {
     border: 2px groove brown;
     background-color: orange; 
 }
+
+.hidden { display: none; }

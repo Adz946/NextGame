@@ -2,55 +2,37 @@
 <html lang="en">
     <head>
         <title>NextGame : Now!</title>
+
         <link rel="stylesheet" href="https://adz946.github.io/css/flex.css" />
-        <link rel="stylesheet" href="{{url_for('static', filename='css/app.css')}}" /> 
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}" /> 
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
         <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+
         <script>
-        $(document).ready(function() {
-            // Setup autocomplete function pulling from _index.game_autocomplete route
-            ['game_1', 'game_2', 'game_3'].forEach(function(id) {
-                $('#' + id).autocomplete({
-                    source: '{{ url_for("_index.game_autocomplete") }}',
-                    minLength: 3,
-                    select: function(event, ui) {
-                        // Select Title
-                        event.preventDefault();
-                        $(this).val(ui.item.label);
-                        // Add ID
-                        num = $(this).attr("id").split("_")[1]
-                        $("#id_" + num).val(ui.item.id)
-                    }
-                });
-            });
-            // Confirmation function
-            $("#confirm").on("click", function() {
-                var gameIds = ['id_1', 'id_2', 'id_3'].map(id => $('#' + id).val()).filter(id => id);
-                if (gameIds.length > 0) {
-                    $.ajax({
-                        url: '/fetch_game_details',
-                        type: 'GET',
-                        traditional: true,  // Ensure array parameters are passed correctly
-                        data: {id: gameIds},
-                        success: function(data) {
-                            $('#similar_genres').val(data.genres);
-                            $('#similar_tags').val(data.tags);
-                            $('#similar_platforms').val(data.platforms);
-                            alert("Success! Games have been added")
-                            alert("Genres: " + data.genres)
-                            alert("Tags: " + data.tags)
-                            alert("Platforms: " + data.platforms)
-                        },
-                        error: function() { alert('Failed to fetch game details.'); }
+            $(function() {
+                // Setup autocomplete function pulling from _index.game_autocomplete route
+                ['game_1', 'game_2', 'game_3'].forEach(function(id) {
+                    $('#' + id).autocomplete({
+                        source: '{{ url_for("_index.game_autocomplete") }}',
+                        minLength: 3,
+                        select: function(event, ui) {
+                            // Select Title
+                            event.preventDefault();
+                            $(this).val(ui.item.label);
+                            // Add ID
+                            let num = $(this).attr("id").split("_")[1]
+                            $("#id_" + num).val(ui.item.id)
+                        }
                     });
-                } else { alert('No games selected.'); }
-            });
-        });
+                });
+            })
         </script>
     </head>
 
-    <body class="column center">
+    <body class="column-top">
         <header class="column center">
             <h2>Find YOUR NextGame</h2>
         </header>
@@ -68,30 +50,29 @@
 
             <div id="search" class="column-top">
                 <p> Enter the Genre, Tag, and Platform that applies to your search! <br>
-                    You can also enter up to 3 similar games to enhance your search </p>
+                    You can also enter up to 3 similar games using our Title-Search Bars </p>
 
                 <div id="sections" class="row-top">
-                    <form action="{{ url_for('_index.game_autocomplete') }}" method="get" class="column-top">
+                    <div id="section_1" class="column-top">
                         <div class="row-left">
                             <label for="game_1">Game 1</label>
-                            <input autocomplete="off" type="text" id="game_1" placeholder="Search for game..." />
+                            <input autocomplete="off" type="text" id="game_1" placeholder="Enter first few letters here..." />
                         </div>
                         <div class="row-left">
                             <label for="game_2">Game 2</label>
-                            <input autocomplete="off" type="text" id="game_2" placeholder="Search for game..." />
+                            <input autocomplete="off" type="text" id="game_2" placeholder="Enter first few letters here..." />
                         </div>
                         <div class="row-left">
                             <label for="game_3">Game 3</label>
-                            <input autocomplete="off" type="text" id="game_3" placeholder="Search for game..." />
+                            <input autocomplete="off" type="text" id="game_3" placeholder="Enter first few letters here..." />
                         </div>
     
                         <input type="hidden" id="id_1" />
                         <input type="hidden" id="id_2" />
                         <input type="hidden" id="id_3" />
-                        <button type="button" id="confirm">Confirm</button>
-                    </form>
-        
-                    <form action="{{ url_for('_index.game_search') }}" method="post" class="column-top">
+                    </div>
+
+                    <div id="section_2" class="column-top">
                         <div class="row-left">
                             <label for="genre">Genre</label>
                             <select name="genre" id="genre">
@@ -118,13 +99,25 @@
                                 {% endfor %}
                             </select>
                         </div>
-        
-                        <input type="hidden" id="similar_genres" name="similar_genres" />
-                        <input type="hidden" id="similar_tags" name="similar_tags" />
-                        <input type="hidden" id="similar_platforms" name="similar_platforms" />
-                        <button type="submit">Find Your Games!</button>
-                    </form>
+                    </div>
                 </div>
+
+                <button id="confirm">Confirm Details</button>
+
+                <form action="{{ url_for('_index.game_search') }}" method="post" class="row-top hidden">
+                    <div id="similar_games" class="row-center">
+                    </div>
+
+                    <div id="filters" class="row-center">  
+                    </div>
+                    
+                    <input type="hidden" id="similar_genres" name="similar_genres" />
+                    <input type="hidden" id="similar_tags" name="similar_tags" />
+                    <input type="hidden" id="similar_platforms" name="similar_platforms" />
+
+                    <p>Up to 10 games will be found!</p>
+                    <button type="submit">Find YOUR NextGames</button>
+                </form>
             </div>
         </main>
     </body>

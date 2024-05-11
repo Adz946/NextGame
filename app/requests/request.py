@@ -57,7 +57,7 @@ def autocomplete_search(search_query):
     game_names = [{'id': game['id'], 'value': game['name']} for game in response.json()['results']]
     return jsonify(game_names)
 # ---------------------------------------------------------------------------------------------------- # 
-def search_by_id(game_ids):
+def search_by_id(game_ids, user_genre, user_tag, user_platform):
     common_details = {}
     all_details = []
 
@@ -66,23 +66,21 @@ def search_by_id(game_ids):
         data = make_request(url)
         if data:
             details = {
-                'genres': set(genre['name'] for genre in data.get('genres', [])),
-                'tags': set(tag['name'] for tag in data.get('tags', [])),
-                'platforms': set(platform['platform']['name'] for platform in data.get('platforms', []))
+                'title': data['name'], 'image': data['background_image'],
+                'genres': set(genre['name'] for genre in data.get('genres', [])) | {user_genre},
+                'tags': set(tag['name'] for tag in data.get('tags', [])) | {user_tag},
+                'platforms': set(platform['platform']['name'] for platform in data.get('platforms', [])) | {user_platform}
             }
             all_details.append(details)
 
     if all_details:
-        # Initialize common details with the first game's details
-        common_details = all_details[0]
-        for details in all_details[1:]:
-            # Intersect the sets to find common genres, tags, platforms
-            common_details['genres'] &= details['genres']
-            common_details['tags'] &= details['tags']
-            common_details['platforms'] &= details['platforms']
-            
-        # Convert sets to comma-separated strings
-        common_details = {key: ','.join(values) for key, values in common_details.items()}
+        common_details = {
+            'genres': set.intersection(*(d['genres'] for d in all_details)),
+            'tags': set.intersection(*(d['tags'] for d in all_details)),
+            'platforms': set.intersection(*(d['platforms'] for d in all_details))
+        }
+        common_details['games'] = [{'title': d['title'], 'image': d['image']} for d in all_details]
+        for key in ['genres', 'tags', 'platforms']: common_details[key] = ','.join(common_details[key])
         return jsonify(common_details)
     else:
         return jsonify({"error": "Failed to fetch game details for provided IDs"}), 500

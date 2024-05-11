@@ -1,5 +1,6 @@
 from app.requests.request import home_setup, autocomplete_search, search_by_id;
 from flask import Blueprint, render_template, session, request, jsonify;
+import logging;
 # ---------------------------------------------------------------------------------------------------- #
 _index = Blueprint("_index", __name__, url_prefix="/")
 
@@ -28,9 +29,13 @@ def game_autocomplete():
 
 @_index.route('/fetch_game_details', methods=["GET"])
 def fetch_game_details():
-    ids = request.args.getlist("id")
-    if ids: return search_by_id(ids)
-    else: return jsonify({"error": "Game IDs required!"}), 400
+    game_ids = request.args.getlist('ids')
+    user_genre = request.args.get('genre')
+    user_tag = request.args.get('tag')
+    user_platform = request.args.get('platform')
+
+    if game_ids: return search_by_id(game_ids, user_genre, user_tag, user_platform)
+    else: return jsonify({"error": "Game IDs required"}), 400
 # ---------------------------------------------------------------------------------------------------- #
 def setup():
     genres, tags, platforms = home_setup()
