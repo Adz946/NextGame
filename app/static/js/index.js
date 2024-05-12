@@ -41,6 +41,7 @@ $(function() {
                 success: function(returned_data) {
                     if (returned_data.error) { alert(returned_data.error); }
                     else {
+                        console.log(returned_data)
                         $("#similar_games").html(gamesDiv(returned_data.games));
                         $("#similar_games").show();
 

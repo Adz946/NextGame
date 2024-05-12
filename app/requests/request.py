@@ -60,7 +60,7 @@ def autocomplete_search(search_query):
     else: return None
 # ---------------------------------------------------------------------------------------------------- # 
 def search_by_id(game_ids, genreName, genreID, tagName, tagID, platformName, platformID):
-    all_details = []
+    games = []
     combined_details = {
         'genres': {(genreName, genreID)}, 'tags': {(tagName, tagID)}, 'platforms': {(platformName, platformID)}
     }
@@ -71,7 +71,7 @@ def search_by_id(game_ids, genreName, genreID, tagName, tagID, platformName, pla
         if data:
             details = extract.extract_specifics(data)
             if details:
-                all_details.append(details)
+                games.append({"title": details["name"], "image": details["image"]})
                 for key in ['genres', 'tags', 'platforms']:
                     if key in details: combined_details[key].update(details[key])
         
@@ -82,7 +82,7 @@ def search_by_id(game_ids, genreName, genreID, tagName, tagID, platformName, pla
         result[key + '_names'] = names
         result[key + '_ids'] = ids
 
-    result['games'] = [{'title': d['title'], 'image': d['image']} for d in all_details if 'title' in d and 'image' in d]
+    result['games'] = games
     return jsonify(result)
 # ---------------------------------------------------------------------------------------------------- # 
 def search_for_results(genres, tags, platforms, limit = 10):
