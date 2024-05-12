@@ -1,2 +1,44 @@
 WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 208-590-476
+INFO:werkzeug: * Debugger PIN: 465-186-061
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/genres?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/tags?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/platforms?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
+INFO:root:Success! Genres have been found
+INFO:root:Success! Tags have been found
+INFO:root:Success! Platforms have been found
+INFO:werkzeug:127.0.0.1 - - [12/May/2024 21:42:22] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/May/2024 21:42:22] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [12/May/2024 21:42:22] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games?key=b876dc8875674725a3d822a2d8dc79d2&search=Halo HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games?key=b876dc8875674725a3d822a2d8dc79d2&search=Halo%20 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [12/May/2024 21:42:39] "GET /game_autocomplete?term=Halo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/May/2024 21:42:39] "GET /game_autocomplete?term=Halo%20 HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games?key=b876dc8875674725a3d822a2d8dc79d2&search=Halo%20 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games?key=b876dc8875674725a3d822a2d8dc79d2&search=Halo%20R HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [12/May/2024 21:42:40] "GET /game_autocomplete?term=Halo%20 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/May/2024 21:42:41] "GET /game_autocomplete?term=Halo%20R HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games/28613?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [12/May/2024 21:42:43] "GET /fetch_game_details?ids=28613&genre=Action|4&tag=Singleplayer|31&platform=PC|4 HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games?key=b876dc8875674725a3d822a2d8dc79d2&language=eng&genres=4,2&tags=31,37796&platforms=4,14,1&page_size=20 HTTP/1.1" 200 None
+INFO:root:Success! Up to 20 Games found with filters: 4,2 - 31,37796 - 4,14,1
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/genres?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/tags?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
+DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/platforms?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
+INFO:root:Success! Genres have been found
+INFO:root:Success! Tags have been found
+INFO:root:Success! Platforms have been found
+INFO:werkzeug:127.0.0.1 - - [12/May/2024 21:42:59] "POST /game_search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/May/2024 21:42:59] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [12/May/2024 21:42:59] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -

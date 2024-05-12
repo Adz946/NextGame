@@ -1,4 +1,4 @@
-# Generate Request
+# Generate Requests
 from flask import jsonify
 import requests, time, logging;
 import app.requests.game_extract as extract;
@@ -54,43 +54,45 @@ def home_setup():
 # ---------------------------------------------------------------------------------------------------- # 
 def autocomplete_search(search_query):
     response = requests.get(f"https://api.rawg.io/api/games?key={api_key}&search={search_query}")
-    game_names = [{'id': game['id'], 'value': game['name']} for game in response.json()['results']]
-    return jsonify(game_names)
+    if response:
+        game_names = [{'id': game['id'], 'value': game['name']} for game in response.json()['results']]
+        return jsonify(game_names)
+    else: return None
 # ---------------------------------------------------------------------------------------------------- # 
-def search_by_id(game_ids, user_genre, user_tag, user_platform):
-    common_details = {}
+def search_by_id(game_ids, genreName, genreID, tagName, tagID, platformName, platformID):
     all_details = []
-
+    combined_details = {
+        'genres': {(genreName, genreID)}, 'tags': {(tagName, tagID)}, 'platforms': {(platformName, platformID)}
+    }
+    
     for game_id in game_ids:
         url = f"https://api.rawg.io/api/games/{game_id}?key={api_key}"
         data = make_request(url)
         if data:
-            details = {
-                'title': data['name'], 'image': data['background_image'],
-                'genres': set(genre['name'] for genre in data.get('genres', [])) | {user_genre},
-                'tags': set(tag['name'] for tag in data.get('tags', [])) | {user_tag},
-                'platforms': set(platform['platform']['name'] for platform in data.get('platforms', [])) | {user_platform}
-            }
-            all_details.append(details)
+            details = extract.extract_specifics(data)
+            if details:
+                all_details.append(details)
+                for key in ['genres', 'tags', 'platforms']:
+                    if key in details: combined_details[key].update(details[key])
+        
+    result = {}
+    for key in ['genres', 'tags', 'platforms']:
+        names = ' | '.join(name for name, _ in combined_details[key])
+        ids = ','.join(str(id) for _, id in combined_details[key])
+        result[key + '_names'] = names
+        result[key + '_ids'] = ids
 
-    if all_details:
-        common_details = {
-            'genres': set.intersection(*(d['genres'] for d in all_details)),
-            'tags': set.intersection(*(d['tags'] for d in all_details)),
-            'platforms': set.intersection(*(d['platforms'] for d in all_details))
-        }
-        common_details['games'] = [{'title': d['title'], 'image': d['image']} for d in all_details]
-        for key in ['genres', 'tags', 'platforms']: common_details[key] = ','.join(common_details[key])
-        return jsonify(common_details)
-    else:
-        return jsonify({"error": "Failed to fetch game details for provided IDs"}), 500
+    result['games'] = [{'title': d['title'], 'image': d['image']} for d in all_details if 'title' in d and 'image' in d]
+    return jsonify(result)
 # ---------------------------------------------------------------------------------------------------- # 
-def search_for_results(genre, tag, platform):
-    url = f"https://api.rawg.io/api/games?key={api_key}&genres={genre}&tags={tag}&platforms={platform}&page_size=10"
+def search_for_results(genres, tags, platforms, limit = 10):
+    url = f"https://api.rawg.io/api/games?key={api_key}&language=eng&genres={genres}&tags={tags}&platforms={platforms}&page_size={limit}"
     data = make_request(url)
     
     if data:
-        logging.info(f"Success! Up to 10 Games found with filters: {genre} - {tag} - {platform}")
+        print(url)
+        print("Games Found")
+        logging.info(f"Success! Up to {limit} Games found with filters: {genres} - {tags} - {platforms}")
         return extract.game_data(data)
     else:
         logging.error(no_response)

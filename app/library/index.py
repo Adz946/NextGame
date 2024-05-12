@@ -1,6 +1,5 @@
-from app.requests.request import home_setup, autocomplete_search, search_by_id;
 from flask import Blueprint, render_template, session, request, jsonify;
-import logging;
+import app.requests.request as query;
 # ---------------------------------------------------------------------------------------------------- #
 _index = Blueprint("_index", __name__, url_prefix="/")
 
@@ -16,29 +15,38 @@ def index():
 # ---------------------------------------------------------------------------------------------------- #   
 @_index.route("/game_search", methods=["POST"])
 def game_search():
-    genre = request.form['genre']
-    tag = request.form['tag']
-    platform = request.form['platform']
-    print(f"Genre: {genre} | Tag: {tag} | Platform: {platform}")
+    genres = request.form['similar_genres']
+    tags = request.form['similar_tags']
+    platforms = request.form['similar_platforms']
+    limit = request.form['search_limit']
     
+    results = query.search_for_results(genres, tags, platforms, limit)
+    if results:
+        print("Starting Search")
+        for result in results: 
+            if result: print(f"ID: {result["id"]} | Name: {result["name"]}")
+            else: print("Error!")
+        print("Ending Search")
+    else: print("Nothing Found?!")
     return index()
 
 @_index.route("/game_autocomplete")
 def game_autocomplete():
-    return autocomplete_search(request.args.get('term', '')) # jQuery UI sends 'term' by default
+    return query.autocomplete_search(request.args.get('term', '')) # jQuery UI sends 'term' by default
 
 @_index.route('/fetch_game_details', methods=["GET"])
 def fetch_game_details():
     game_ids = request.args.getlist('ids')
-    user_genre = request.args.get('genre')
-    user_tag = request.args.get('tag')
-    user_platform = request.args.get('platform')
+    genre = request.args.get('genre').split("|")
+    tag = request.args.get('tag').split("|")
+    platform = request.args.get('platform').split("|")
 
-    if game_ids: return search_by_id(game_ids, user_genre, user_tag, user_platform)
+    if game_ids: 
+        return query.search_by_id(game_ids, genre[0], int(genre[1]), tag[0], int(tag[1]), platform[0], int(platform[1]))
     else: return jsonify({"error": "Game IDs required"}), 400
 # ---------------------------------------------------------------------------------------------------- #
 def setup():
-    genres, tags, platforms = home_setup()
+    genres, tags, platforms = query.home_setup()
     
     if genres is not None: session['genres'] = genres
     if tags is not None: session['tags'] = tags 

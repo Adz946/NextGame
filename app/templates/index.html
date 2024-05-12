@@ -50,21 +50,21 @@
 
             <div id="search" class="column-top">
                 <p> Enter the Genre, Tag, and Platform that applies to your search! <br>
-                    You can also enter up to 3 similar games using our Title-Search Bars </p>
+                    You can enhace your search with our 3 Title Search-Bars (Search Results take a few seconds) </p>
 
                 <div id="sections" class="row-top">
                     <div id="section_1" class="column-top">
                         <div class="row-left">
-                            <label for="game_1">Game 1</label>
-                            <input autocomplete="off" type="text" id="game_1" placeholder="Enter first few letters here..." />
+                            <label for="game_1">Game Title 1</label>
+                            <input autocomplete="off" type="text" id="game_1" placeholder="Enter at least 3 characters here..." />
                         </div>
                         <div class="row-left">
-                            <label for="game_2">Game 2</label>
-                            <input autocomplete="off" type="text" id="game_2" placeholder="Enter first few letters here..." />
+                            <label for="game_2">Game Title 2</label>
+                            <input autocomplete="off" type="text" id="game_2" placeholder="Enter at least 3 characters here..." />
                         </div>
                         <div class="row-left">
-                            <label for="game_3">Game 3</label>
-                            <input autocomplete="off" type="text" id="game_3" placeholder="Enter first few letters here..." />
+                            <label for="game_3">Game Title 3</label>
+                            <input autocomplete="off" type="text" id="game_3" placeholder="Enter at least 3 characters here..." />
                         </div>
     
                         <input type="hidden" id="id_1" />
@@ -77,7 +77,7 @@
                             <label for="genre">Genre</label>
                             <select name="genre" id="genre">
                                 {% for genre_name, genre_id in genres.items() %}
-                                <option value="{{ genre_name }}">{{ genre_name }}</option>
+                                <option value="{{ genre_name }}|{{ genre_id }}">{{ genre_name }}</option>
                                 {% endfor %}
                             </select>
                         </div>
@@ -86,7 +86,7 @@
                             <label for="tag">Tag</label>
                             <select name="tag" id="tag">
                                 {% for tag_name, tag_id in tags.items() %}
-                                <option value="{{ tag_name }}">{{ tag_name }}</option>
+                                <option value="{{ tag_name }}|{{ tag_id }}">{{ tag_name }}</option>
                                 {% endfor %}
                             </select>
                         </div>
@@ -95,7 +95,7 @@
                             <label for="platform">Platform</label>
                             <select name="platform" id="platform">
                                 {% for platform_name, platform_id in platforms.items() %}
-                                <option value="{{ platform_name }}">{{ platform_name }}</option>
+                                <option value="{{ platform_name }}|{{ platform_id }}">{{ platform_name }}</option>
                                 {% endfor %}
                             </select>
                         </div>
@@ -103,19 +103,27 @@
                 </div>
 
                 <button id="confirm">Confirm Details</button>
+                <hr/>
+                
+                <div id="similar_games" class="hidden"> <h2>Similar Games</h2> </div>   
+                <div id="filters" class="hidden"> <h2>All Filters</h2> </div>
+                <br><br>
 
-                <form action="{{ url_for('_index.game_search') }}" method="post" class="row-top hidden">
-                    <div id="similar_games" class="row-center">
-                    </div>
-
-                    <div id="filters" class="row-center">  
-                    </div>
-                    
+                <form id="confirm_form" action="{{ url_for('_index.game_search') }}" method="post" class="row-top hidden">
                     <input type="hidden" id="similar_genres" name="similar_genres" />
                     <input type="hidden" id="similar_tags" name="similar_tags" />
                     <input type="hidden" id="similar_platforms" name="similar_platforms" />
+                    <input type="hidden" id="search_limit" name="search_limit" value="10" />
 
-                    <p>Up to 10 games will be found!</p>
+                    <h4>How Many Games Are We Finding?</h4>
+                    <div id="limit-div" class="row center">
+                        <button type="button" id="limit_5" class="limit_btn">5</button>
+                        <button type="button" id="limit_10" class="limit_btn active">10</button>
+                        <button type="button" id="limit_15" class="limit_btn">15</button>
+                        <button type="button" id="limit_20" class="limit_btn">20</button>
+                        <button type="button" id="limit_25" class="limit_btn">25</button>
+                    </div>
+
                     <button type="submit">Find YOUR NextGames</button>
                 </form>
             </div>
