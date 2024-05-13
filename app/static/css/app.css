@@ -106,3 +106,21 @@ td {
 hr { width: 95%; }
 h4 { margin: 0; padding: 0; }
 h4, form { padding-bottom: 2%; }
+
+.result {
+    margin: 1%;
+    width: 80%;
+    padding: 1%;
+    color: snow;
+    border-radius: 10px;
+    background-color: brown;
+}
+.result img { 
+    width: 25%; 
+    border: 5px groove lightsalmon;
+}
+
+.result div { 
+    width: 75%; 
+    margin-left: 1%;
+}

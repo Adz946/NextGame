@@ -28,7 +28,6 @@ def extract_data(game):
                 'rating': game['rating'],
                 'released': game['released'],
                 'image': game['background_image'],
-                'trailer': game.get('clip', {}).get('clip') if game.get('clip') else None,
                 'esrb_rating': game['esrb_rating']['name'] if game.get('esrb_rating') else 'Not Rated',
                 
                 'tags': 

@@ -3,30 +3,26 @@ from flask import jsonify
 import requests, time, logging;
 import app.requests.game_extract as extract;
 
-api_key = "b876dc8875674725a3d822a2d8dc79d2"
+api_key = "df5f51d5ba374f299bf346197b1527ca"
 no_response = "No Response Found! All Attempts Have Been Made | Quiting Process!"
 # ---------------------------------------------------------------------------------------------------- # 
-def make_request(url, retries = 5):
-    delay = 3
+# Request via Lambda Function
+def rawg_request(rawg_url):
+    url = 'https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws/'
+    params = { "url": rawg_url }
+    response = requests.get(url, params=params)
+    code = response.status_code
     
-    for attempt in range(retries):
-        try:
-            response = requests.get(url)
-            response.raise_for_status()
-            return response.json()
-        except requests.exceptions.HTTPError as e:
-            logging.warning(f"HTTP error on attempt {attempt + 1}: {e}")
-            time.sleep(delay)  # Increase delay exponentially if needed
-            delay *= 2
-        except requests.exceptions.RequestException as e:
-            logging.error(f"Request failed: {e}")
-            break  # Non-retryable error
-    return None
+    if code == 200: return response.json()
+    else:
+        logging.error(f"Response Error: [{response.text}]")
+        print(f"Response Error: [{response.text}]")
+        return None
 # ---------------------------------------------------------------------------------------------------- # 
 def home_setup():
-    genres = make_request(f"https://api.rawg.io/api/genres?key={api_key}")
-    tags = make_request(f"https://api.rawg.io/api/tags?key={api_key}")
-    platforms = make_request(f"https://api.rawg.io/api/platforms?key={api_key}")
+    genres = rawg_request(f"https://api.rawg.io/api/genres?key={api_key}")
+    tags = rawg_request(f"https://api.rawg.io/api/tags?key={api_key}")
+    platforms = rawg_request(f"https://api.rawg.io/api/platforms?key={api_key}")
     data = []
     
     if genres:
@@ -53,9 +49,9 @@ def home_setup():
     return data
 # ---------------------------------------------------------------------------------------------------- # 
 def autocomplete_search(search_query):
-    response = requests.get(f"https://api.rawg.io/api/games?key={api_key}&search={search_query}")
+    response = rawg_request(f"https://api.rawg.io/api/games?key={api_key}&search={search_query}")
     if response:
-        game_names = [{'id': game['id'], 'value': game['name']} for game in response.json()['results']]
+        game_names = [{'id': game['id'], 'value': game['name']} for game in response['results']]
         return jsonify(game_names)
     else: return None
 # ---------------------------------------------------------------------------------------------------- # 
@@ -66,8 +62,7 @@ def search_by_id(game_ids, genreName, genreID, tagName, tagID, platformName, pla
     }
     
     for game_id in game_ids:
-        url = f"https://api.rawg.io/api/games/{game_id}?key={api_key}"
-        data = make_request(url)
+        data = rawg_request(f"https://api.rawg.io/api/games/{game_id}?key={api_key}")
         if data:
             details = extract.extract_specifics(data)
             if details:
@@ -86,12 +81,9 @@ def search_by_id(game_ids, genreName, genreID, tagName, tagID, platformName, pla
     return jsonify(result)
 # ---------------------------------------------------------------------------------------------------- # 
 def search_for_results(genres, tags, platforms, limit = 10):
-    url = f"https://api.rawg.io/api/games?key={api_key}&language=eng&genres={genres}&tags={tags}&platforms={platforms}&page_size={limit}"
-    data = make_request(url)
+    data = rawg_request(f"https://api.rawg.io/api/games?key={api_key}&language=eng&genres={genres}&tags={tags}&platforms={platforms}&page_size={limit}")
     
     if data:
-        print(url)
-        print("Games Found")
         logging.info(f"Success! Up to {limit} Games found with filters: {genres} - {tags} - {platforms}")
         return extract.game_data(data)
     else:

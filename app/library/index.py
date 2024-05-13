@@ -1,5 +1,5 @@
-from flask import Blueprint, render_template, session, request, jsonify;
 import app.requests.request as query;
+from flask import Blueprint, render_template, redirect, url_for, session, request, jsonify;
 # ---------------------------------------------------------------------------------------------------- #
 _index = Blueprint("_index", __name__, url_prefix="/")
 
@@ -22,11 +22,8 @@ def game_search():
     
     results = query.search_for_results(genres, tags, platforms, limit)
     if results:
-        print("Starting Search")
-        for result in results: 
-            if result: print(f"ID: {result["id"]} | Name: {result["name"]}")
-            else: print("Error!")
-        print("Ending Search")
+        session["results"] = results
+        return redirect(url_for('_results.results'))
     else: print("Nothing Found?!")
     return index()
 

@@ -1,56 +1,102 @@
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 465-186-061
-DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
-DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/genres?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
-DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/tags?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
-DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/platforms?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:38:31] "GET /your-results/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:38:32] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:39:09] "GET /your-results/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:39:09] "GET /static/css/app.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:39:44] "GET /your-results/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:39:44] "GET /static/css/app.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:39:46] "GET /your-results/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:39:46] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:40:30] "GET /your-results/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:40:30] "GET /static/css/app.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:40:55] "GET /your-results/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:40:55] "GET /static/css/app.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:41:11] "GET /your-results/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:41:11] "GET /static/css/app.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:41:28] "GET /your-results/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:41:28] "GET /static/css/app.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:41:52] "GET /your-results/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:41:52] "GET /static/css/app.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:42:18] "GET /your-results/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:42:18] "GET /static/css/app.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:42:27] "GET /your-results/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:42:27] "GET /static/css/app.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:42:34] "GET /your-results/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:42:34] "GET /static/css/app.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:42:44] "GET /your-results/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:42:45] "GET /static/css/app.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:42:54] "GET /your-results/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:42:54] "GET /static/css/app.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:43:06] "GET /your-results/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:43:07] "GET /static/css/app.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:43:28] "GET /your-results/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:43:28] "GET /static/css/app.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:43:57] "GET /your-results/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:43:57] "GET /static/css/app.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:44:20] "GET /your-results/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:44:20] "GET /static/css/app.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:44:44] "GET /your-results/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:44:44] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:45:36] "GET /your-results/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:45:36] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:45:57] "GET /your-results/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:45:57] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:46:07] "GET /your-results/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:46:07] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:46:46] "GET /your-results/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:46:46] "GET /static/css/app.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:47:13] "GET /your-results/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:47:13] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:47:27] "GET /your-results/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:47:27] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:47:43] "GET /your-results/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:47:43] "GET /static/css/app.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:48:11] "GET /your-results/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:48:11] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:48:57] "GET /your-results/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:48:57] "GET /static/css/app.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:50:36] "GET /your-results/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:50:36] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:50:51] "GET /your-results/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:50:52] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:51:09] "GET /your-results/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:51:09] "GET /static/css/app.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:51:28] "GET /your-results/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:51:28] "GET /static/css/app.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:51:30] "GET /your-results/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:51:30] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:53:26] "GET /your-results/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:53:26] "GET /static/css/app.css HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgenres%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca HTTP/1.1" 200 13193
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Ftags%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca HTTP/1.1" 200 7563
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fplatforms%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca HTTP/1.1" 200 38072
 INFO:root:Success! Genres have been found
 INFO:root:Success! Tags have been found
 INFO:root:Success! Platforms have been found
-INFO:werkzeug:127.0.0.1 - - [12/May/2024 21:57:40] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/May/2024 21:57:40] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [12/May/2024 21:57:40] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
-DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
-DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games?key=b876dc8875674725a3d822a2d8dc79d2&search=Halo%20 HTTP/1.1" 200 None
-INFO:werkzeug:127.0.0.1 - - [12/May/2024 21:57:52] "GET /game_autocomplete?term=Halo%20 HTTP/1.1" 200 -
-DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
-DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games/28613?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
-INFO:werkzeug:127.0.0.1 - - [12/May/2024 21:57:54] "GET /fetch_game_details?ids=28613&genre=Action|4&tag=Singleplayer|31&platform=PC|4 HTTP/1.1" 200 -
-DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
-DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games?key=b876dc8875674725a3d822a2d8dc79d2&search=Halo%20Chief HTTP/1.1" 200 None
-INFO:werkzeug:127.0.0.1 - - [12/May/2024 21:58:05] "GET /game_autocomplete?term=Halo%20Chief HTTP/1.1" 200 -
-DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
-DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games/28613?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
-DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games/857?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
-INFO:werkzeug:127.0.0.1 - - [12/May/2024 21:58:09] "GET /fetch_game_details?ids=28613&ids=857&genre=Action|4&tag=Singleplayer|31&platform=PC|4 HTTP/1.1" 200 -
-DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
-DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
-DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games?key=b876dc8875674725a3d822a2d8dc79d2&search=Halo HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games?key=b876dc8875674725a3d822a2d8dc79d2&search=Halo%205 HTTP/1.1" 200 None
-INFO:werkzeug:127.0.0.1 - - [12/May/2024 21:58:23] "GET /game_autocomplete?term=Halo HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/May/2024 21:58:24] "GET /game_autocomplete?term=Halo%205 HTTP/1.1" 200 -
-DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
-DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games/28613?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
-DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games/857?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
-DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games/8444?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
-INFO:werkzeug:127.0.0.1 - - [12/May/2024 21:58:30] "GET /fetch_game_details?ids=28613&ids=857&ids=8444&genre=Action|4&tag=Singleplayer|31&platform=PC|4 HTTP/1.1" 200 -
-DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
-DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/games?key=b876dc8875674725a3d822a2d8dc79d2&language=eng&genres=4,2,3&tags=8,193,7,118,397,172,16,411,42,13,9,205,30,81,577,578,37796,32,581,31,25,37797,18&platforms=4,14,1&page_size=20 HTTP/1.1" 200 None
-INFO:root:Success! Up to 20 Games found with filters: 4,2,3 - 8,193,7,118,397,172,16,411,42,13,9,205,30,81,577,578,37796,32,581,31,25,37797,18 - 4,14,1
-DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
-DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/genres?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
-DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/tags?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.rawg.io:443
-DEBUG:urllib3.connectionpool:https://api.rawg.io:443 "GET /api/platforms?key=b876dc8875674725a3d822a2d8dc79d2 HTTP/1.1" 200 None
-INFO:root:Success! Genres have been found
-INFO:root:Success! Tags have been found
-INFO:root:Success! Platforms have been found
-INFO:werkzeug:127.0.0.1 - - [12/May/2024 21:58:54] "POST /game_search HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/May/2024 21:58:54] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [12/May/2024 21:58:54] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:53:40] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:53:40] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:53:40] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgames%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca%26search%3DStar HTTP/1.1" 200 117630
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:53:54] "GET /game_autocomplete?term=Star HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgames%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca%26search%3DStard HTTP/1.1" 200 122610
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:54:01] "GET /game_autocomplete?term=Stard HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgames%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca%26search%3DStardew+ HTTP/1.1" 200 92232
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:54:02] "GET /game_autocomplete?term=Stardew%20 HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgames%2F654%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca HTTP/1.1" 200 15941
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:54:13] "GET /fetch_game_details?ids=654&genre=Indie|51&tag=Singleplayer|31&platform=PC|4 HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgames%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca%26language%3Deng%26genres%3D14%2C51%2C5%26tags%3D337%2C45%2C155%2C7%2C39%2C7808%2C42%2C88%2C46112%2C24%2C138%2C160%2C40849%2C18%2C37%2C159%2C122%2C74%2C409%2C36%2C40847%2C40845%2C31%2C468%2C338%2C13%2C125%26platforms%3D3%2C5%2C4%2C6%2C18%2C19%2C1%2C7%2C21%26page_size%3D15 HTTP/1.1" 200 177709
+INFO:root:Success! Up to 15 Games found with filters: 14,51,5 - 337,45,155,7,39,7808,42,88,46112,24,138,160,40849,18,37,159,122,74,409,36,40847,40845,31,468,338,13,125 - 3,5,4,6,18,19,1,7,21
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:54:21] "[32mPOST /game_search HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:54:22] "GET /your-results/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:54:22] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:54:28] "GET /your-results/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/May/2024 23:54:28] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -

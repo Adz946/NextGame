@@ -23,7 +23,18 @@
             </div>
 
             <div id="search" class="column-top">
-                <h3>Here are your results</h3>
+                <a href="{{ url_for('_index.index') }}"> Search Again </a>
+
+                {% for game in games %}
+                <div class="row-left result">
+                    <img src="{{ game['image'] }}" width="150" height="150" alt="Cover For: [{{ game['name'] }}]" />
+                    <div class="column-left">
+                        <h4>{{ game["name"] }}</h4>
+                        <p class="row-left"> <b>Rating</b>: [{{ game["rating"] }} / 5] </p>
+                        <p class="row-left"> <b>Release Date</b>: [{{ game["released"] }}] </p>
+                    </div>
+                </div>
+                {% endfor %}
             </div>
         </main>
     </body>
