@@ -1,11 +1,13 @@
 from app.requests.request import home_setup;
-from flask import Blueprint, render_template, session;
+from flask import Blueprint, render_template, session, request, json;
 # ---------------------------------------------------------------------------------------------------- #
-_results = Blueprint("_results", __name__, url_prefix="/your-results")
+_results = Blueprint("_results", __name__, url_prefix="/your-nextgames")
 
 @_results.route("/")
 def results():
-    return render_template("results.html", games = session["results"])
+    games_json = request.args.get("games")
+    games = json.loads(games_json) if games_json else {}
+    return render_template("results.html", games = games)
 # ---------------------------------------------------------------------------------------------------- #
 
 # ---------------------------------------------------------------------------------------------------- #
