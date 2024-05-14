@@ -1,59 +1,56 @@
 # Generate Requests
 from flask import jsonify
-import requests, time, logging;
+import requests, logging;
 import app.requests.game_extract as extract;
+from concurrent.futures import ThreadPoolExecutor, as_completed;
 
 api_key = "df5f51d5ba374f299bf346197b1527ca"
+executor = ThreadPoolExecutor(max_workers = 5)
 no_response = "No Response Found! All Attempts Have Been Made | Quiting Process!"
 # ---------------------------------------------------------------------------------------------------- # 
 # Request via Lambda Function
-def rawg_request(rawg_url):
-    url = 'https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws/'
-    params = { "url": rawg_url }
-    response = requests.get(url, params=params)
-    code = response.status_code
-    
-    if code == 200: return response.json()
-    else:
-        logging.error(f"Response Error: [{response.text}]")
-        print(f"Response Error: [{response.text}]")
-        return None
+def rawg_request(rawg_urls):
+    def fetch(url):
+        path = 'https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws/'
+        response = requests.get(path, params = { "url": url })
+        code = response.status_code
+        
+        if code == 200: return response.json()
+        else:
+            logging.error(f"Response Error: {response.text}")
+            return None
+        
+    futures = [executor.submit(fetch, url) for url in rawg_urls]
+    results = [future.result() for future in as_completed(futures)]      
+    return results
 # ---------------------------------------------------------------------------------------------------- # 
 def home_setup():
-    genres = rawg_request(f"https://api.rawg.io/api/genres?key={api_key}")
-    tags = rawg_request(f"https://api.rawg.io/api/tags?key={api_key}")
-    platforms = rawg_request(f"https://api.rawg.io/api/platforms?key={api_key}")
+    urls = [
+        f"https://api.rawg.io/api/genres?key={api_key}&page_size=50",
+        f"https://api.rawg.io/api/tags?key={api_key}&page_size=50",
+        f"https://api.rawg.io/api/platforms?key={api_key}&page_size=50"
+    ]
+    results = rawg_request(urls)
     data = []
     
-    if genres:
-        logging.info("Success! Genres have been found")
-        data.append({item["name"]: item["id"] for item in genres["results"]})
-    else: 
-        logging.error(no_response)
-        data.append(None)
-        
-    if tags:
-        logging.info("Success! Tags have been found")
-        data.append({item["name"]: item["id"] for item in tags["results"]})
-    else: 
-        logging.error(no_response)
-        data.append(None)
-        
-    if platforms:
-        logging.info("Success! Platforms have been found")
-        data.append({item["name"]: item["id"] for item in platforms["results"]})
-    else: 
-        logging.error(no_response)
-        data.append(None)
+    for result in results:
+        if result is not None:
+            logging.info("Success! Results Found")
+            data.append({item["name"]: item["id"] for item in result["results"]})
+        else:
+            logging.error(no_response)
+            data.append(None)
         
     return data
 # ---------------------------------------------------------------------------------------------------- # 
 def autocomplete_search(search_query):
-    response = rawg_request(f"https://api.rawg.io/api/games?key={api_key}&search={search_query}")
-    if response:
-        game_names = [{'id': game['id'], 'value': game['name']} for game in response['results']]
-        return jsonify(game_names)
-    else: return None
+    results = rawg_request([f"https://api.rawg.io/api/games?key={api_key}&search={search_query}"])
+    
+    for result in results:
+        if result:
+            game_names = [{'id': game['id'], 'value': game['name']} for game in result['results']]
+            return jsonify(game_names)
+        else: return None
 # ---------------------------------------------------------------------------------------------------- # 
 def search_by_id(game_ids, genreName, genreID, tagName, tagID, platformName, platformID):
     games = []
@@ -61,10 +58,12 @@ def search_by_id(game_ids, genreName, genreID, tagName, tagID, platformName, pla
         'genres': {(genreName, genreID)}, 'tags': {(tagName, tagID)}, 'platforms': {(platformName, platformID)}
     }
     
-    for game_id in game_ids:
-        data = rawg_request(f"https://api.rawg.io/api/games/{game_id}?key={api_key}")
-        if data:
-            details = extract.extract_specifics(data)
+    urls = [f"https://api.rawg.io/api/games/{game_id}?key={api_key}" for game_id in game_ids]
+    results = rawg_request(urls)
+    
+    for result in results:
+        if result:
+            details = extract.extract_specifics(result)
             if details:
                 games.append({"title": details["name"], "image": details["image"]})
                 for key in ['genres', 'tags', 'platforms']:
@@ -81,12 +80,15 @@ def search_by_id(game_ids, genreName, genreID, tagName, tagID, platformName, pla
     return jsonify(result)
 # ---------------------------------------------------------------------------------------------------- # 
 def search_for_results(genres, tags, platforms, limit = 10):
-    data = rawg_request(f"https://api.rawg.io/api/games?key={api_key}&language=eng&genres={genres}&tags={tags}&platforms={platforms}&page_size={limit}")
+    results = rawg_request(
+        [f"https://api.rawg.io/api/games?key={api_key}&language=eng&genres={genres}&tags={tags}&platforms={platforms}&page_size={limit}"]
+    )
     
-    if data:
-        logging.info(f"Success! Up to {limit} Games found with filters: {genres} - {tags} - {platforms}")
-        return extract.game_data(data)
-    else:
-        logging.error(no_response)
-        return None
+    for result in results:
+        if result:
+            logging.info(f"Success! Up to {limit} Games found with filters: {genres} - {tags} - {platforms}")
+            return extract.game_data(result)
+        else:
+            logging.error(no_response)
+            return None
 # ---------------------------------------------------------------------------------------------------- # 
