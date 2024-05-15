@@ -2,7 +2,7 @@ body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background-color: floralwhite;
+    background-color: gray;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 main, header { width: 95%; }
@@ -73,6 +73,7 @@ button:hover {
     border: 2px groove brown;
     background-color: orange; 
 }
+#confirm { height: 7vh; }
 
 .hidden { display: none; }
 
@@ -123,4 +124,12 @@ h4, form { padding-bottom: 2%; }
 .result div { 
     width: 75%; 
     margin-left: 1%;
+}
+
+.error {
+    width: 50%;
+    padding: 1%;
+    color: snow;
+    font-weight: bolder;
+    background-color: brown;
 }

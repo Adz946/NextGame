@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>NextGame : Sign Up</title>
+        <link rel="stylesheet" href="https://adz946.github.io/css/flex.css" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/account.css') }}" /> 
+    </head>
+
+    <body class="column center">
+        <form id="signup" method="post" enctype="multipart/form-data" action="{{ url_for('_register.process') }}" class="column center">
+            <div class="row center">
+                <div class="column center">
+                    <label for="id">User ID</label>
+                    <input required type="text" minlength="12" maxlength="12" id="id" name="id" placeholder="Unique ID" />
+                </div>
+
+                <div class="column center">
+                    <label for="name">Display Name</label>
+                    <input required type="text" maxlength="30" id="name" name="name" placeholder="Display Name" />
+                </div>
+
+                <div class="column center">
+                    <label for="pass">Password</label>
+                    <input required type="password" maxlength="30" id="pass" name="pass" />
+                </div>
+
+                <div class="column center">
+                    <label for="v_pass">Verify Password</label>
+                    <input required type="password" maxlength="30" id="v_pass" v_pass="name" />
+                </div>
+            </div>
+
+            <div class="row center">
+                <label for="profile_img">Profile Image</label>
+                <input type="file" id="profile_img" name="profile_img" accept="image/*" required />
+            </div>
+
+            <hr>
+
+            <div class="row center">
+                <div class="column center">
+                    <label for="f_name">First Name</label>
+                    <input required type="text" maxlength="30" id="f_name" name="f_name" placeholder="First Name" />
+                </div>
+
+                <div class="column center">
+                    <label for="m_name">Middle Name</label>
+                    <input type="text" maxlength="30" id="m_name" name="m_name" placeholder="Middle Name (Optional)" />
+                </div>
+
+                <div class="column center">
+                    <label for="l_name">Last Name</label>
+                    <input required type="text" maxlength="30" id="l_name" name="l_name" placeholder="Last Name" />
+                </div>
+            </div>
+
+            <div class="row center">
+                <div class="column center">
+                    <label for="email">Email</label>
+                    <input required type="email" maxlength="100" id="email" name="email" placeholder="Email" />
+                </div>
+
+                <div class="column center">
+                    <label for="mobile">Mobile</label>
+                    <input required type="tel" maxlength="20" id="mobile" name="mobile" placeholder="Mobile Number" />
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row center">
+                <div class="column center">
+                    <label for="street">Street Address</label>
+                    <input required type="text" id="street" name="street" placeholder="Street Address" />
+                </div>
+
+                <div class="column center">
+                    <label for="city">City</label>
+                    <input required type="text" id="city" name="city" placeholder="City" />
+                </div>
+    
+                <div class="column center">
+                    <label for="state">State</label>
+                    <input required type="text" id="state" name="state" placeholder="State" />
+                </div>
+
+                <div class="column center">
+                    <label for="postal_code">Postal Code</label>
+                    <input required type="text" id="postal_code" name="postal_code" placeholder="Postal Code" />
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row center">
+                <button type="submit">Sign Up</button>
+                <a href="{{ url_for('_index.index') }}"> <button type="button">Cancel</button> </a>
+            </div>
+        </form>
+    </body>
+</html>

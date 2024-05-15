@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>NextGame : Sign In</title>
+        <link rel="stylesheet" href="https://adz946.github.io/css/flex.css" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/account.css') }}" /> 
+    </head>
+
+    <body class="column center">
+        <form id="signin" method="post" action="{{ url_for('_login.process') }}" class="column center">
+            <div class="column center">
+                <label for="id">User ID</label>
+                <input required type="text" minlength="12" maxlength="12" id="id" name="id" placeholder="Your Unique ID" />
+            </div>
+
+            <div class="column center">
+                <label for="pass">Password</label>
+                <input required type="password" maxlength="30" id="pass" name="pass" />
+            </div>
+
+            <div class="row center">
+                <button type="submit">Sign In</button>
+                <a href="{{ url_for('_index.index') }}"> <button type="button">Cancel</button> </a>
+            </div>
+        </form>
+    </body>
+</html>

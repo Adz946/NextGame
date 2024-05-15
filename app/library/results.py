@@ -1,5 +1,4 @@
-from app.requests.request import home_setup;
-from flask import Blueprint, render_template, session, request, json;
+from flask import Blueprint, render_template, request, json;
 # ---------------------------------------------------------------------------------------------------- #
 _results = Blueprint("_results", __name__, url_prefix="/your-nextgames")
 

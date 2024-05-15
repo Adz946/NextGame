@@ -43,8 +43,8 @@
                 <h3>Hello User!</h3>
                 {% else %}
                 <h3>Sign In / Up Now! <br> Save Your Searches</h3>
-                <button>Sign In</button>
-                <button>Sign Up</button>
+                <a href="{{ url_for('_login.login') }}"> <button>Sign In</button> </a>
+                <a href="{{ url_for('_register.register') }}"> <button>Sign Up</button> </a>
                 {% endif %}
             </div>
 
@@ -102,8 +102,9 @@
                     </div>
                 </div>
 
+                {% if error %} <p class="error">{{ error }}</p> {% endif %}
                 <button id="confirm">Confirm Details</button>
-                <hr/>
+                <hr>
                 
                 <div id="similar_games" class="hidden"> <h2>Similar Games</h2> </div>   
                 <div id="filters" class="hidden"> <h2>All Filters</h2> </div>

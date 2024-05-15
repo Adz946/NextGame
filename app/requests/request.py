@@ -10,6 +10,8 @@ no_response = "No Response Found! All Attempts Have Been Made | Quiting Process!
 # ---------------------------------------------------------------------------------------------------- # 
 # Request via Lambda Function
 def rawg_request(rawg_urls):
+    [print(f"URL: [{url}]") for url in rawg_urls]
+    
     def fetch(url):
         path = 'https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws/'
         response = requests.get(path, params = { "url": url })
@@ -28,7 +30,7 @@ def home_setup():
     urls = [
         f"https://api.rawg.io/api/genres?key={api_key}&page_size=50",
         f"https://api.rawg.io/api/tags?key={api_key}&page_size=50",
-        f"https://api.rawg.io/api/platforms?key={api_key}&page_size=50"
+        f"https://api.rawg.io/api/platforms?key={api_key}&page_size=100"
     ]
     results = rawg_request(urls)
     data = []
@@ -52,10 +54,10 @@ def autocomplete_search(search_query):
             return jsonify(game_names)
         else: return None
 # ---------------------------------------------------------------------------------------------------- # 
-def search_by_id(game_ids, genreName, genreID, tagName, tagID, platformName, platformID):
+def search_by_id(game_ids, genre_name, genre_id, tag_name, tag_id, platform_name, platform_id):
     games = []
     combined_details = {
-        'genres': {(genreName, genreID)}, 'tags': {(tagName, tagID)}, 'platforms': {(platformName, platformID)}
+        'genres': {(genre_name, genre_id)}, 'tags': {(tag_name, tag_id)}, 'platforms': {(platform_name, platform_id)}
     }
     
     urls = [f"https://api.rawg.io/api/games/{game_id}?key={api_key}" for game_id in game_ids]

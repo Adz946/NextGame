@@ -1,0 +1,48 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: lightgray;
+}
+hr { 
+    width: 95%; 
+    border: 2px groove brown;
+}
+
+form {
+    width: 50%;
+    border: 5px groove brown;
+    background-color: lightsalmon;
+}
+#signin { height: 40%; }
+#signup { height: 80%; }
+
+form div {
+    margin: 1%;
+    padding: 1%;
+}
+label { font-weight: bold;  }
+
+input[type="file"] {
+    padding: 1%;
+    color: snow;
+    background-color: brown;
+    border: 2px groove brown;
+    border-radius: 0px 10px 10px 0px;
+}
+
+button {
+    border: 0;
+    margin: 1%;
+    width: 10vw;
+    height: 4vh;
+    color: snow;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: orangered;
+}
+button:hover { 
+    color: black;
+    border: 2px groove brown;
+    background-color: orange; 
+}
