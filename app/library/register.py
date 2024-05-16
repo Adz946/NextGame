@@ -15,7 +15,6 @@ def process():
         ["id", "name", "pass", "v_pass", "f_name", "m_name", "l_name", "email", "mobile", "street", "city", "state", "postal"]
     ]
     profile = request.files.get("profile_img", None)
-    print(f"Password: {data[2]} - {data[3]}")
     
     if data[2] == data[3]:
         logging.info("Password Match! Sending to DB")
@@ -24,27 +23,32 @@ def process():
         address = f"{data[9]}, {data[10]} {data[11]}, {data[12]}"
         user = [data[0], data[1], password, data[4], data[5], data[6], data[7], data[8], address]
     else:
-        logging.info("Password Do Not Match! Returning to Register Page")
-        return redirect(url_for("_register.register", error = "Password Do Not Match"))
+        logging.info("Passwords Do Not Match! Returning to Register Page")
+        return redirect(url_for("_register.register", error = "Passwords Do Not Match"))
     
     image = base64.b64encode(profile.read()).decode('utf-8') if profile else None
+    insert = insert_user(user, image)
     
-    if insert_user(user, image): 
+    if insert is None:
         session["user"] = user[0]
         return redirect(url_for("_index.index"))
-    else: return redirect(url_for("_register.register", error = "Error Occured While Populating the DB"))
+    else:
+        return redirect(url_for("_register.register", error = insert))
 # ---------------------------------------------------------------------------------------------------- #
 def insert_user(user, image):
-    url = "https://pkxwtya6si.execute-api.us-east-1.amazonaws.com/user_insert/user_insert"
+    url = "https://pkxwtya6si.execute-api.us-east-1.amazonaws.com/prod/user_insert"
     headers = { 'Content-Type': 'application/json' }
     payload = { "user": user, "image": image }
     
     try:
         response = requests.post(url, headers=headers, data=json.dumps(payload))
-        if response.status_code == 200: logging.info("Success! User Added To DB [+ Image to S3]")
-        else: logging.error(f"DB Error: {response.status_code} - {response.text}")
-        return True
+        if response.status_code == 200: 
+            logging.info("Success! User Added To DB [+ Image to S3]")
+            return None
+        else: 
+            logging.error(f"Insert Error: {response.status_code} - {response.text}")
+            return response.text.replace("\"", "")
     except requests.exceptions.RequestException as e:
         logging.error(f"HTTP Request Error: {e}")
-        return False
+        return "An Error Has Occured! Please Try Again"
 # ---------------------------------------------------------------------------------------------------- #

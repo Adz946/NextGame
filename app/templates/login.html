@@ -8,6 +8,8 @@
 
     <body class="column center">
         <form id="signin" method="post" action="{{ url_for('_login.process') }}" class="column center">
+            {% if error %} <p class="error">{{ error }}</p> {% endif %}
+
             <div class="column center">
                 <label for="id">User ID</label>
                 <input required type="text" minlength="12" maxlength="12" id="id" name="id" placeholder="Your Unique ID" />

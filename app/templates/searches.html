@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>NextGame : Previous Searches</title>
+        <link rel="stylesheet" href="https://adz946.github.io/css/flex.css" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}" /> 
+
+        <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="{{ url_for('static', filename='js/searches.js') }}"></script>
+    </head>
+
+    <body class="column-top">
+        <header class="column center">
+            <h2>View YOUR NextGames</h2>
+        </header>
+
+        <main class="row">
+            <div id="user" class="column-top">
+                {% if user %}
+                <div id="userContent" class="column center">
+                    <div class="column-top">
+                        <img id="profileImg" src="{{ user['ProfileImg'] }}" alt="Your Profile Pic" height="150" />
+                        <h2>{{ user["Username"] }}</h2>
+                    </div>
+
+                    <div class="column-bottom">
+                        <a href="{{ url_for('_index.index') }}"> <button>Home</button> </a>
+                        <a href="{{ url_for('_login.login') }}"> <button>Sign Out</button> </a>
+                    </div>
+                </div>
+                {% else %}
+                <a href="{{ url_for('_index.index') }}"> <button>Home</button> </a>
+
+                <h3>Sign In / Up Now! <br> Save Your Searches</h3>
+                <a href="{{ url_for('_login.login') }}"> <button>Sign In</button> </a>
+                <a href="{{ url_for('_register.register') }}"> <button>Sign Up</button> </a>
+                {% endif %}
+            </div>
+
+            <div id="search" class="column-top">
+                {% if searches %} 
+                <h2>Your Results</h2>
+
+                <table>
+                    <tr>
+                        <th>Search Date</th>
+                        <th>Game IDs</th>
+                        <th></th>
+                    </tr>
+
+                    {% for search in searches %}
+                    <tr>
+                        <td class="mid"> {{ search["SearchDate"] }} </td>
+                        <td class="lrg" id="game_{{ search['SearchNum'] }}"> {{ search["SearchKeys"] }} </td>
+                        <td class="mid"> <button id="btn_{{ search['SearchNum'] }}">Search These</button> </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+
+                <form id="searchForm" method="post" class="column-top hidden" action="{{ url_for('_searches.search_games') }}">
+                    <input type="hidden" id="game_ids" name="game_ids" />
+                    <button type="submit">Find Games (Again!)</button>
+                </form>
+                {% else %} <h2>Save Your Searches <br> Find Them Here</h2> {% endif %}
+            </div>
+        </main>
+    </body>
+</html>

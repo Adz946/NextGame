@@ -15,7 +15,7 @@ form {
     border: 5px groove brown;
     background-color: lightsalmon;
 }
-#signin { height: 40%; }
+#signin { height: 60%; }
 #signup { height: 90%; }
 
 form div {
@@ -52,6 +52,8 @@ button:hover {
     width: 50%;
     padding: 1%;
     color: snow;
+    font-size: large;
+    border-radius: 10px;
     font-weight: bolder;
-    background-color: brown;
+    background-color: red;
 }

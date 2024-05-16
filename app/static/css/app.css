@@ -133,3 +133,21 @@ h4, form { padding-bottom: 2%; }
     font-weight: bolder;
     background-color: brown;
 }
+
+#profileImg {
+    margin-top: 5%;
+    border-radius: 10px;
+    border: 2px groove orangered;
+}
+#userContent { justify-content: space-between; }
+
+.disabled { background-color: #ff450090; }
+
+
+.lrg { 
+    padding: 1%;
+    width: 40vw; 
+    overflow-x: auto; 
+}
+.mid { width: 10vw; }
+[id*='btn_'] { width: 95%; }

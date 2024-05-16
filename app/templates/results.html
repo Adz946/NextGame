@@ -3,7 +3,7 @@
     <head>
         <title>NextGame : Your Results</title>
         <link rel="stylesheet" href="https://adz946.github.io/css/flex.css" />
-        <link rel="stylesheet" href="{{url_for('static', filename='css/app.css')}}" /> 
+        <link rel="stylesheet" href="{{url_for('static', filename='css/app.css')}}" />
     </head>
 
     <body class="column center">
@@ -14,16 +14,36 @@
         <main class="row">
             <div id="user" class="column-top">
                 {% if user %}
-                <h3>Hello User!</h3>
+                <div id="userContent" class="column center">
+                    <div class="column-top">
+                        <img id="profileImg" src="{{ user['ProfileImg'] }}" alt="Your Profile Pic" height="150" />
+                        <h2>{{ user["Username"] }}</h2>
+                    </div>
+
+                    <div class="column-bottom">
+                        {% if saved %} <button disabled class="disabled">List Saved</button>
+                        {% else %}
+                        <form action="{{ url_for('_results.save_game_ids') }}" method="post" class="row center">
+                            <input type="hidden" id="game_ids" name="game_ids" value="{{ game_ids }}" />
+                            <button type="submit">Save List</button>
+                        </form>
+                        {% endif %}
+
+                        <a href="{{ url_for('_index.index') }}"> <button>Home</button> </a>
+                        <a href="{{ url_for('_login.login') }}"> <button>Sign Out</button> </a>
+                    </div>
+                </div>
                 {% else %}
+                <a href="{{ url_for('_index.index') }}"> <button>Home</button> </a>
+                
                 <h3>Sign In / Up Now! <br> Save Your Searches</h3>
-                <button>Sign In</button>
-                <button>Sign Up</button>
+                <a href="{{ url_for('_login.login') }}"> <button>Sign In</button> </a>
+                <a href="{{ url_for('_register.register') }}"> <button>Sign Up</button> </a>
                 {% endif %}
             </div>
 
             <div id="search" class="column-top">
-                <a href="{{ url_for('_index.index') }}"> Search Again </a>
+                {% if error %} <p class="error">{{ error }}</p> {% endif %}
 
                 {% for game in games %}
                 <div class="row-left result">

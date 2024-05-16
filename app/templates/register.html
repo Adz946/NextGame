@@ -8,6 +8,8 @@
 
     <body class="column center">
         <form id="signup" method="post" enctype="multipart/form-data" action="{{ url_for('_register.process') }}" class="column-top">
+            {% if error %} <p class="error">{{ error }}</p> {% endif %}
+            
             <div class="row center">
                 <div class="column center">
                     <label for="id">User ID</label>
@@ -32,7 +34,7 @@
 
             <div class="row center">
                 <label for="profile_img">Profile Image</label>
-                <input type="file" id="profile_img" name="profile_img" accept="image/*" required />
+                <input type="file" id="profile_img" name="profile_img" accept="image/*" />
             </div>
 
             <hr>
@@ -81,7 +83,7 @@
     
                 <div class="column center">
                     <label for="state">State</label>
-                    <input required type="text" id="state" name="state" placeholder="State" />
+                    <input required type="text" minlength="2" maxlength="3" id="state" name="state" placeholder="State" />
                 </div>
 
                 <div class="column center">
@@ -89,8 +91,6 @@
                     <input required type="text" id="postal" name="postal" placeholder="Postal Code" />
                 </div>
             </div>
-
-            {% if error %} <p class="error">{{ error }}</p> {% endif %}
 
             <div class="row center">
                 <button type="submit">Sign Up</button>

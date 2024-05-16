@@ -1,12 +1,297 @@
 WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 465-186-061
-INFO:werkzeug:127.0.0.1 - - [15/May/2024 22:39:48] "GET /register/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/May/2024 22:39:48] "[36mGET /static/css/account.css HTTP/1.1[0m" 304 -
-INFO:root:Password Match! Sending to DB
+INFO:werkzeug: * Debugger PIN: 118-178-768
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): pkxwtya6si.execute-api.us-east-1.amazonaws.com:443
-DEBUG:urllib3.connectionpool:https://pkxwtya6si.execute-api.us-east-1.amazonaws.com:443 "POST /user_insert/user_insert HTTP/1.1" 502 36
-ERROR:root:DB Error: 502 - {"message": "Internal server error"}
-INFO:werkzeug:127.0.0.1 - - [15/May/2024 22:40:20] "[32mPOST /register/process HTTP/1.1[0m" 302 -
-INFO:werkzeug:127.0.0.1 - - [15/May/2024 22:40:20] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/May/2024 22:40:21] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/May/2024 22:40:21] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+DEBUG:urllib3.connectionpool:https://pkxwtya6si.execute-api.us-east-1.amazonaws.com:443 "GET /prod/get_user?userID=_Adam_Saleh_ HTTP/1.1" 200 100
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): pkxwtya6si.execute-api.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://pkxwtya6si.execute-api.us-east-1.amazonaws.com:443 "GET /prod/find_searches?userID=_Adam_Saleh_ HTTP/1.1" 200 298
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:10:11] "GET /your-previous-searches/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:10:12] "[36mGET /static/js/searches.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:10:12] "GET /static/css/app.css HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): pkxwtya6si.execute-api.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://pkxwtya6si.execute-api.us-east-1.amazonaws.com:443 "GET /prod/get_user?userID=_Adam_Saleh_ HTTP/1.1" 200 100
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): pkxwtya6si.execute-api.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://pkxwtya6si.execute-api.us-east-1.amazonaws.com:443 "GET /prod/find_searches?userID=_Adam_Saleh_ HTTP/1.1" 200 298
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:11:59] "GET /your-previous-searches/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:11:59] "[36mGET /static/js/searches.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:11:59] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): pkxwtya6si.execute-api.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://pkxwtya6si.execute-api.us-east-1.amazonaws.com:443 "GET /prod/get_user?userID=_Adam_Saleh_ HTTP/1.1" 200 100
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): pkxwtya6si.execute-api.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://pkxwtya6si.execute-api.us-east-1.amazonaws.com:443 "GET /prod/find_searches?userID=_Adam_Saleh_ HTTP/1.1" 200 298
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:12:31] "GET /your-previous-searches/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:12:31] "[36mGET /static/js/searches.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:12:31] "GET /static/css/app.css HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): pkxwtya6si.execute-api.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://pkxwtya6si.execute-api.us-east-1.amazonaws.com:443 "GET /prod/get_user?userID=_Adam_Saleh_ HTTP/1.1" 200 100
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): pkxwtya6si.execute-api.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://pkxwtya6si.execute-api.us-east-1.amazonaws.com:443 "GET /prod/find_searches?userID=_Adam_Saleh_ HTTP/1.1" 200 298
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:13:07] "GET /your-previous-searches/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:13:07] "[36mGET /static/js/searches.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:13:07] "GET /static/css/app.css HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): pkxwtya6si.execute-api.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://pkxwtya6si.execute-api.us-east-1.amazonaws.com:443 "GET /prod/get_user?userID=_Adam_Saleh_ HTTP/1.1" 200 100
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): pkxwtya6si.execute-api.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://pkxwtya6si.execute-api.us-east-1.amazonaws.com:443 "GET /prod/find_searches?userID=_Adam_Saleh_ HTTP/1.1" 200 298
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:13:45] "GET /your-previous-searches/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:13:46] "[36mGET /static/js/searches.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:13:46] "GET /static/css/app.css HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): pkxwtya6si.execute-api.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://pkxwtya6si.execute-api.us-east-1.amazonaws.com:443 "GET /prod/get_user?userID=_Adam_Saleh_ HTTP/1.1" 200 100
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): pkxwtya6si.execute-api.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://pkxwtya6si.execute-api.us-east-1.amazonaws.com:443 "GET /prod/find_searches?userID=_Adam_Saleh_ HTTP/1.1" 200 298
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:14:31] "GET /your-previous-searches/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:14:31] "[36mGET /static/js/searches.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:14:31] "GET /static/css/app.css HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): pkxwtya6si.execute-api.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://pkxwtya6si.execute-api.us-east-1.amazonaws.com:443 "GET /prod/get_user?userID=_Adam_Saleh_ HTTP/1.1" 200 100
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): pkxwtya6si.execute-api.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://pkxwtya6si.execute-api.us-east-1.amazonaws.com:443 "GET /prod/find_searches?userID=_Adam_Saleh_ HTTP/1.1" 200 298
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:14:52] "GET /your-previous-searches/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:14:52] "[36mGET /static/js/searches.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:14:52] "GET /static/css/app.css HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): pkxwtya6si.execute-api.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://pkxwtya6si.execute-api.us-east-1.amazonaws.com:443 "GET /prod/get_user?userID=_Adam_Saleh_ HTTP/1.1" 200 100
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): pkxwtya6si.execute-api.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://pkxwtya6si.execute-api.us-east-1.amazonaws.com:443 "GET /prod/find_searches?userID=_Adam_Saleh_ HTTP/1.1" 200 298
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:15:35] "GET /your-previous-searches/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:15:35] "[36mGET /static/js/searches.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:15:35] "GET /static/css/app.css HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): pkxwtya6si.execute-api.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://pkxwtya6si.execute-api.us-east-1.amazonaws.com:443 "GET /prod/get_user?userID=_Adam_Saleh_ HTTP/1.1" 200 100
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): pkxwtya6si.execute-api.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://pkxwtya6si.execute-api.us-east-1.amazonaws.com:443 "GET /prod/find_searches?userID=_Adam_Saleh_ HTTP/1.1" 200 298
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:16:01] "GET /your-previous-searches/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:16:01] "[36mGET /static/js/searches.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:16:01] "GET /static/css/app.css HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): pkxwtya6si.execute-api.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://pkxwtya6si.execute-api.us-east-1.amazonaws.com:443 "GET /prod/get_user?userID=_Adam_Saleh_ HTTP/1.1" 200 100
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): pkxwtya6si.execute-api.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://pkxwtya6si.execute-api.us-east-1.amazonaws.com:443 "GET /prod/find_searches?userID=_Adam_Saleh_ HTTP/1.1" 200 298
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:16:40] "GET /your-previous-searches/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:16:40] "[36mGET /static/js/searches.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:16:40] "GET /static/css/app.css HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): pkxwtya6si.execute-api.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://pkxwtya6si.execute-api.us-east-1.amazonaws.com:443 "GET /prod/get_user?userID=_Adam_Saleh_ HTTP/1.1" 200 100
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): pkxwtya6si.execute-api.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://pkxwtya6si.execute-api.us-east-1.amazonaws.com:443 "GET /prod/find_searches?userID=_Adam_Saleh_ HTTP/1.1" 200 298
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:18:08] "GET /your-previous-searches/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:18:08] "GET /static/css/app.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:18:08] "GET /static/js/searches.js HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): pkxwtya6si.execute-api.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://pkxwtya6si.execute-api.us-east-1.amazonaws.com:443 "GET /prod/get_user?userID=_Adam_Saleh_ HTTP/1.1" 200 100
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): pkxwtya6si.execute-api.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://pkxwtya6si.execute-api.us-east-1.amazonaws.com:443 "GET /prod/find_searches?userID=_Adam_Saleh_ HTTP/1.1" 200 298
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:18:44] "GET /your-previous-searches/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:18:44] "[36mGET /static/js/searches.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:18:44] "GET /static/css/app.css HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): pkxwtya6si.execute-api.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://pkxwtya6si.execute-api.us-east-1.amazonaws.com:443 "GET /prod/get_user?userID=_Adam_Saleh_ HTTP/1.1" 200 100
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): pkxwtya6si.execute-api.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://pkxwtya6si.execute-api.us-east-1.amazonaws.com:443 "GET /prod/find_searches?userID=_Adam_Saleh_ HTTP/1.1" 200 298
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:19:16] "GET /your-previous-searches/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:19:16] "[36mGET /static/js/searches.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:19:16] "GET /static/css/app.css HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): pkxwtya6si.execute-api.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://pkxwtya6si.execute-api.us-east-1.amazonaws.com:443 "GET /prod/get_user?userID=_Adam_Saleh_ HTTP/1.1" 200 100
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): pkxwtya6si.execute-api.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://pkxwtya6si.execute-api.us-east-1.amazonaws.com:443 "GET /prod/find_searches?userID=_Adam_Saleh_ HTTP/1.1" 200 298
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:19:35] "GET /your-previous-searches/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:19:35] "[36mGET /static/js/searches.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:19:35] "GET /static/css/app.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:19:46] "[32mPOST /your-previous-searches/search_games HTTP/1.1[0m" 302 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): pkxwtya6si.execute-api.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://pkxwtya6si.execute-api.us-east-1.amazonaws.com:443 "GET /prod/get_user?userID=_Adam_Saleh_ HTTP/1.1" 200 100
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgames%2F3328%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca HTTP/1.1" 429 87
+ERROR:root:Response Error: {"Reason":"ConcurrentInvocationLimitExceeded","Type":"User","message":"Rate Exceeded."}
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgames%2F4286%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca HTTP/1.1" 429 87
+ERROR:root:Response Error: {"Reason":"ConcurrentInvocationLimitExceeded","Type":"User","message":"Rate Exceeded."}
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgames%2F2454%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca HTTP/1.1" 429 87
+ERROR:root:Response Error: {"Reason":"ConcurrentInvocationLimitExceeded","Type":"User","message":"Rate Exceeded."}
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgames%2F4200%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca HTTP/1.1" 429 87
+ERROR:root:Response Error: {"Reason":"ConcurrentInvocationLimitExceeded","Type":"User","message":"Rate Exceeded."}
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgames%2F4291%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca HTTP/1.1" 429 87
+ERROR:root:Response Error: {"Reason":"ConcurrentInvocationLimitExceeded","Type":"User","message":"Rate Exceeded."}
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgames%2F13536%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca HTTP/1.1" 429 87
+ERROR:root:Response Error: {"Reason":"ConcurrentInvocationLimitExceeded","Type":"User","message":"Rate Exceeded."}
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgames%2F28%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca HTTP/1.1" 429 87
+ERROR:root:Response Error: {"Reason":"ConcurrentInvocationLimitExceeded","Type":"User","message":"Rate Exceeded."}
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgames%2F32%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca HTTP/1.1" 429 87
+ERROR:root:Response Error: {"Reason":"ConcurrentInvocationLimitExceeded","Type":"User","message":"Rate Exceeded."}
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgames%2F802%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca HTTP/1.1" 429 87
+ERROR:root:Response Error: {"Reason":"ConcurrentInvocationLimitExceeded","Type":"User","message":"Rate Exceeded."}
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgames%2F3070%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca HTTP/1.1" 429 87
+ERROR:root:Response Error: {"Reason":"ConcurrentInvocationLimitExceeded","Type":"User","message":"Rate Exceeded."}
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgames%2F1030%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca HTTP/1.1" 200 15887
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgames%2F3439%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca HTTP/1.1" 200 14941
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgames%2F58175%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca HTTP/1.1" 200 14189
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgames%2F4062%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca HTTP/1.1" 200 14063
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgames%2F13537%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca HTTP/1.1" 200 12347
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgames%2F5679%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca HTTP/1.1" 200 12922
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgames%2F5286%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca HTTP/1.1" 200 12421
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgames%2F12020%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca HTTP/1.1" 200 13105
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:20:01] "GET /login/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:20:02] "[36mGET /static/css/account.css HTTP/1.1[0m" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgenres%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca%26page_size%3D50 HTTP/1.1" 200 13193
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fplatforms%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca%26page_size%3D50 HTTP/1.1" 200 30768
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Ftags%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca%26page_size%3D50 HTTP/1.1" 200 29173
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:20:07] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:20:07] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:20:07] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:20:10] "GET /login/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:20:10] "[36mGET /static/css/account.css HTTP/1.1[0m" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): pkxwtya6si.execute-api.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://pkxwtya6si.execute-api.us-east-1.amazonaws.com:443 "POST /prod/user_find HTTP/1.1" 200 18
+INFO:root:Success! User Found
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:20:28] "[32mPOST /login/process HTTP/1.1[0m" 302 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgenres%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca%26page_size%3D50 HTTP/1.1" 200 13193
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fplatforms%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca%26page_size%3D50 HTTP/1.1" 200 30768
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Ftags%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca%26page_size%3D50 HTTP/1.1" 200 29173
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): pkxwtya6si.execute-api.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://pkxwtya6si.execute-api.us-east-1.amazonaws.com:443 "GET /prod/get_user?userID=LarryDaBeast HTTP/1.1" 200 110
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:20:34] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:20:34] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:20:34] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgames%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca%26language%3Deng%26genres%3D4%26tags%3D31%26platforms%3D4%26page_size%3D5 HTTP/1.1" 200 61956
+INFO:root:Success! Up to 5 Games found with filters: 4 - 31 - 4
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:20:44] "[32mPOST /game_search HTTP/1.1[0m" 302 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): pkxwtya6si.execute-api.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://pkxwtya6si.execute-api.us-east-1.amazonaws.com:443 "GET /prod/get_user?userID=LarryDaBeast HTTP/1.1" 200 110
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgames%2F12020%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca HTTP/1.1" 200 13105
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgames%2F13536%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca HTTP/1.1" 200 13060
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgames%2F3328%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca HTTP/1.1" 200 12630
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgames%2F5286%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca HTTP/1.1" 200 12421
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgames%2F3498%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca HTTP/1.1" 200 17677
+INFO:root:Extracting Game: 1
+INFO:root:Extracting Game: 2
+INFO:root:Extracting Game: 3
+INFO:root:Extracting Game: 4
+INFO:root:Extracting Game: 5
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:20:50] "GET /your-nextgames/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:20:50] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+INFO:root:Game IDs: 3498_3328_5286_13536_12020
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): pkxwtya6si.execute-api.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://pkxwtya6si.execute-api.us-east-1.amazonaws.com:443 "POST /prod/search_insert HTTP/1.1" 200 27
+INFO:root:IDs Saved for User [LarryDaBeast] | ['3498_3328_5286_13536_12020']
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:20:58] "[32mPOST /your-nextgames/save_game_ids HTTP/1.1[0m" 302 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): pkxwtya6si.execute-api.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://pkxwtya6si.execute-api.us-east-1.amazonaws.com:443 "GET /prod/get_user?userID=LarryDaBeast HTTP/1.1" 200 110
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgames%2F5286%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca HTTP/1.1" 200 12421
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgames%2F13536%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca HTTP/1.1" 200 13060
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgames%2F3328%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca HTTP/1.1" 200 12630
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgames%2F12020%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca HTTP/1.1" 200 13105
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgames%2F3498%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca HTTP/1.1" 200 17677
+INFO:root:Extracting Game: 1
+INFO:root:Extracting Game: 2
+INFO:root:Extracting Game: 3
+INFO:root:Extracting Game: 4
+INFO:root:Extracting Game: 5
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:21:03] "GET /your-nextgames/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:21:04] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): pkxwtya6si.execute-api.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://pkxwtya6si.execute-api.us-east-1.amazonaws.com:443 "GET /prod/get_user?userID=LarryDaBeast HTTP/1.1" 200 110
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:21:08] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:21:08] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:21:09] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): pkxwtya6si.execute-api.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgames%2F3939+%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca HTTP/1.1" 500 31
+ERROR:root:Response Error: {"error": "Data Fetch: FAILED"}
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgames%2F+3498%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca HTTP/1.1" 500 31
+ERROR:root:Response Error: {"error": "Data Fetch: FAILED"}
+WARNING:root:Search Failed for Game: 1
+WARNING:root:Search Failed for Game: 2
+WARNING:root:Search Failed for Game: 3
+WARNING:root:Search Failed for Game: 4
+INFO:root:Extracting Game: 5
+WARNING:root:Search Failed for Game: 6
+INFO:root:Extracting Game: 7
+INFO:root:Extracting Game: 8
+WARNING:root:Search Failed for Game: 9
+INFO:root:Extracting Game: 10
+INFO:root:Extracting Game: 11
+WARNING:root:Search Failed for Game: 12
+INFO:root:Extracting Game: 13
+WARNING:root:Search Failed for Game: 14
+WARNING:root:Search Failed for Game: 15
+INFO:root:Extracting Game: 16
+INFO:root:Extracting Game: 17
+WARNING:root:Search Failed for Game: 18
+WARNING:root:Search Failed for Game: 19
+WARNING:root:Search Failed for Game: 20
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:21:11] "GET /your-nextgames/ HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://pkxwtya6si.execute-api.us-east-1.amazonaws.com:443 "GET /prod/get_user?userID=LarryDaBeast HTTP/1.1" 200 110
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): pkxwtya6si.execute-api.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://pkxwtya6si.execute-api.us-east-1.amazonaws.com:443 "GET /prod/find_searches?userID=LarryDaBeast HTTP/1.1" 200 99
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:21:15] "GET /your-previous-searches/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:21:15] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:21:15] "[36mGET /static/js/searches.js HTTP/1.1[0m" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): pkxwtya6si.execute-api.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://pkxwtya6si.execute-api.us-east-1.amazonaws.com:443 "GET /prod/get_user?userID=LarryDaBeast HTTP/1.1" 200 110
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): pkxwtya6si.execute-api.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://pkxwtya6si.execute-api.us-east-1.amazonaws.com:443 "GET /prod/find_searches?userID=LarryDaBeast HTTP/1.1" 200 99
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:21:36] "GET /your-previous-searches/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:21:36] "[36mGET /static/js/searches.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:21:36] "GET /static/css/app.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:21:41] "[32mPOST /your-previous-searches/search_games HTTP/1.1[0m" 302 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): pkxwtya6si.execute-api.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://pkxwtya6si.execute-api.us-east-1.amazonaws.com:443 "GET /prod/get_user?userID=LarryDaBeast HTTP/1.1" 200 110
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgames%2F5286%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca HTTP/1.1" 200 12421
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgames%2F3328%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca HTTP/1.1" 200 12630
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgames%2F13536%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca HTTP/1.1" 200 13060
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgames%2F12020+%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca HTTP/1.1" 500 31
+ERROR:root:Response Error: {"error": "Data Fetch: FAILED"}
+DEBUG:urllib3.connectionpool:https://ngiwswbqrdqutlmyrr4auw56va0wdbua.lambda-url.us-east-1.on.aws:443 "GET /?url=https%3A%2F%2Fapi.rawg.io%2Fapi%2Fgames%2F+3498%3Fkey%3Ddf5f51d5ba374f299bf346197b1527ca HTTP/1.1" 500 31
+ERROR:root:Response Error: {"error": "Data Fetch: FAILED"}
+WARNING:root:Search Failed for Game: 1
+INFO:root:Extracting Game: 2
+INFO:root:Extracting Game: 3
+INFO:root:Extracting Game: 4
+WARNING:root:Search Failed for Game: 5
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:23:04] "GET /your-nextgames/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:23:05] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): pkxwtya6si.execute-api.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://pkxwtya6si.execute-api.us-east-1.amazonaws.com:443 "GET /prod/get_user?userID=LarryDaBeast HTTP/1.1" 200 110
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:23:32] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:23:32] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/May/2024 22:23:32] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -

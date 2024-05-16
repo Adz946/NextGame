@@ -40,7 +40,17 @@
         <main class="row">
             <div id="user" class="column-top">
                 {% if user %}
-                <h3>Hello User!</h3>
+                <div id="userContent" class="column center">
+                    <div class="column-top">
+                        <img id="profileImg" src="{{ user['ProfileImg'] }}" alt="Your Profile Pic" height="150" />
+                        <h2>{{ user["Username"] }}</h2>
+                    </div>
+
+                    <div class="column-bottom">
+                        <a href="{{ url_for('_searches.searches') }}"> <button>Your Searches</button> </a>
+                        <a href="{{ url_for('_login.login') }}"> <button>Sign Out</button> </a>
+                    </div>
+                </div>
                 {% else %}
                 <h3>Sign In / Up Now! <br> Save Your Searches</h3>
                 <a href="{{ url_for('_login.login') }}"> <button>Sign In</button> </a>
@@ -51,6 +61,8 @@
             <div id="search" class="column-top">
                 <p> Enter the Genre, Tag, and Platform that applies to your search! <br>
                     You can enhace your search with our 3 Title Search-Bars (Search Results take a few seconds) </p>
+
+                {% if error %} <p class="error">{{ error }}</p> {% endif %}
 
                 <div id="sections" class="row-top">
                     <div id="section_1" class="column-top">
@@ -102,7 +114,6 @@
                     </div>
                 </div>
 
-                {% if error %} <p class="error">{{ error }}</p> {% endif %}
                 <button id="confirm">Confirm Details</button>
                 <hr>
                 
@@ -122,7 +133,6 @@
                         <button type="button" id="limit_10" class="limit_btn active">10</button>
                         <button type="button" id="limit_15" class="limit_btn">15</button>
                         <button type="button" id="limit_20" class="limit_btn">20</button>
-                        <button type="button" id="limit_25" class="limit_btn">25</button>
                     </div>
 
                     <button type="submit">Find YOUR NextGames</button>
