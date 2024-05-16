@@ -10,12 +10,13 @@ hr {
 }
 
 form {
-    width: 50%;
+    width: 80%;
+    overflow-y: auto;
     border: 5px groove brown;
     background-color: lightsalmon;
 }
 #signin { height: 40%; }
-#signup { height: 80%; }
+#signup { height: 90%; }
 
 form div {
     margin: 1%;
@@ -45,4 +46,12 @@ button:hover {
     color: black;
     border: 2px groove brown;
     background-color: orange; 
+}
+
+.error {
+    width: 50%;
+    padding: 1%;
+    color: snow;
+    font-weight: bolder;
+    background-color: brown;
 }

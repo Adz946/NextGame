@@ -7,7 +7,7 @@
     </head>
 
     <body class="column center">
-        <form id="signup" method="post" enctype="multipart/form-data" action="{{ url_for('_register.process') }}" class="column center">
+        <form id="signup" method="post" enctype="multipart/form-data" action="{{ url_for('_register.process') }}" class="column-top">
             <div class="row center">
                 <div class="column center">
                     <label for="id">User ID</label>
@@ -16,17 +16,17 @@
 
                 <div class="column center">
                     <label for="name">Display Name</label>
-                    <input required type="text" maxlength="30" id="name" name="name" placeholder="Display Name" />
+                    <input required type="text" minlength="3" maxlength="30" id="name" name="name" placeholder="Display Name" />
                 </div>
 
                 <div class="column center">
                     <label for="pass">Password</label>
-                    <input required type="password" maxlength="30" id="pass" name="pass" />
+                    <input required type="password" minlength="3" maxlength="30" id="pass" name="pass" />
                 </div>
 
                 <div class="column center">
                     <label for="v_pass">Verify Password</label>
-                    <input required type="password" maxlength="30" id="v_pass" v_pass="name" />
+                    <input required type="password" minlength="3" maxlength="30" id="v_pass" name="v_pass" />
                 </div>
             </div>
 
@@ -40,17 +40,17 @@
             <div class="row center">
                 <div class="column center">
                     <label for="f_name">First Name</label>
-                    <input required type="text" maxlength="30" id="f_name" name="f_name" placeholder="First Name" />
+                    <input required type="text" minlength="3" maxlength="30" id="f_name" name="f_name" placeholder="First Name" />
                 </div>
 
                 <div class="column center">
                     <label for="m_name">Middle Name</label>
-                    <input type="text" maxlength="30" id="m_name" name="m_name" placeholder="Middle Name (Optional)" />
+                    <input type="text" minlength="3" maxlength="30" id="m_name" name="m_name" placeholder="Middle Name (Optional)" />
                 </div>
 
                 <div class="column center">
                     <label for="l_name">Last Name</label>
-                    <input required type="text" maxlength="30" id="l_name" name="l_name" placeholder="Last Name" />
+                    <input required type="text" minlength="3" maxlength="30" id="l_name" name="l_name" placeholder="Last Name" />
                 </div>
             </div>
 
@@ -85,12 +85,12 @@
                 </div>
 
                 <div class="column center">
-                    <label for="postal_code">Postal Code</label>
-                    <input required type="text" id="postal_code" name="postal_code" placeholder="Postal Code" />
+                    <label for="postal">Postal Code</label>
+                    <input required type="text" id="postal" name="postal" placeholder="Postal Code" />
                 </div>
             </div>
 
-            <hr>
+            {% if error %} <p class="error">{{ error }}</p> {% endif %}
 
             <div class="row center">
                 <button type="submit">Sign Up</button>
